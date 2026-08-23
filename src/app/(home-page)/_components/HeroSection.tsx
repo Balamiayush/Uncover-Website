@@ -1,7 +1,7 @@
 import ArrowIcon from "@/shared/components/icons/ArrowIcon";
 import LayoutWrapper from "@/shared/components/layouts/wrapper/LayoutWrapper";
 import Button from "@/shared/components/ui/button/Button";
-import StartAProjectBtn from "@/shared/components/ui/button/StartAProjectBtn";
+
 import TextSlide from "@/shared/components/ui/TextHoverAnim/TextSlide";
 import Image from "next/image";
 
@@ -9,12 +9,10 @@ export default function HeroSection() {
   return (
     <div className="min-h-screen w-full relative bg-black text-white pt-[130px] lg:pt-[9.028vw] pb-8 lg:pb-[3.33vw] flex flex-col justify-between">
       <LayoutWrapper className="flex flex-col justify-between flex-1 w-full">
-     
         <div className="w-full">
           <h1 className="text-[44px] lg:text-[5vw] xl:text-[5vw] leading-[80%] tracking-[-3px] lg:tracking-[-0.208vw] max-w-[358px] lg:max-w-[47.222vw]">
             Every outcome has variables. We uncover what’s holding you back.
           </h1>
-          <StartAProjectBtn className="mt-[2.78vw]" />
         </div>
 
         <div className="relative w-full flex justify-center items-center my-auto py-6">
@@ -37,9 +35,9 @@ export default function HeroSection() {
 
           {/* Center: Subtitle Text */}
           <div className="flex justify-center">
-            <p className="lg:max-w-[26.6vw] max-w-[20.208vw] text-center lg:text-[1.25vw] text-[0.972vw] text-white leading-[110%] font-normal">
-              Do you know which one's working against you? Most people find out
-              only after the budget's gone.
+            <p className="lg:max-w-[19.86vw] max-w-[20.208vw] text-center lg:text-[1.25vw] text-[0.972vw] text-white leading-[110%] font-normal">
+              Most businesses find out the problem, after the budget is already
+              gone.
             </p>
           </div>
 

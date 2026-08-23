@@ -1,5 +1,4 @@
 import LayoutWrapper from "@/shared/components/layouts/wrapper/LayoutWrapper";
-import StartAProjectBtn from "@/shared/components/ui/button/StartAProjectBtn";
 import React from "react";
 
 const credibilityData = [
@@ -38,7 +37,7 @@ export default function CredibilityStripSection() {
               and driving outcomes.
             </p>
           </div>
-          <StartAProjectBtn variant="black" />
+    
         </div>
 
         {/* Credibility Items Table/List */}

@@ -14,31 +14,31 @@ const STEPS = [
     num: "1",
     title: "DIAGNOSE: FIND THE REAL CONSTRAINT.",
     desc: "We analyse your funnel, positioning, customer journey, economics, and data to identify what's actually holding back growth.",
-    positionClass: "top-[12%] right-[-31%] ",
+    positionClass: "top-[10%] right-[-31%] ",
   },
   {
     num: "2",
     title: "PRIORITISE: FOCUS ON WHAT MOVES THE NEEDLE.",
     desc: "Not every problem deserves immediate attention. We find the highest-impact opportunities and decide what to fix first.",
-    positionClass: "top-[30%] left-[3%]  ",
+    positionClass: "top-[28%] left-[3%]  ",
   },
   {
     num: "3",
     title: "BUILD: TURN STRATEGY INTO ACTION.",
     desc: "We launch focused campaigns built around clear hypotheses, measurable outcomes, and informed decisions.",
-    positionClass: "top-[52%] right-[-62%]",
+    positionClass: "top-[49%] right-[-62%]",
   },
   {
     num: "4",
     title: "MEASURE: BUSINESS IMPACT OVER VANITY METRICS.",
     desc: "We connect marketing performance to outcomes that matter revenue, retention, profitability.",
-    positionClass: "top-[68%] left-[-1%] ",
+    positionClass: "top-[66%] left-[-1%] ",
   },
   {
     num: "5",
     title: "COMPOUND: BUILD WHAT KEEPS WORKING.",
     desc: "Successful campaigns become repeatable systems that keep improving over time.",
-    positionClass: "top-[90%] right-[-31%]",
+    positionClass: "top-[89%] right-[-31%]",
   },
 ];
 
@@ -143,16 +143,16 @@ export default function MethodScrollSection() {
               ref={(el) => {
                 stepRefs.current[idx] = el;
               }}
-              className={`absolute flex items-start gap-4 lg:gap-[1.2vw] w-[75%] lg:w-[26vw] ${step.positionClass}`}
+              className={`absolute flex items-center gap-4 lg:gap-[1.2vw] w-[75%] lg:w-[26vw] ${step.positionClass}`}
             >
               <span className="w-6 h-6 lg:w-[1.9vw] lg:h-[1.9vw] bg-white text-black text-xs lg:text-[0.9vw] font-bold text-center flex items-center justify-center rounded-full border-[6px] border-[#FFFFFF33] shrink-0">
                 {step.num}
               </span>
               <div>
-                <p className="text-[14px] lg:text-[1.39vw]  text-white uppercase text-nowrap ">
+                <p className="text-[14px] lg:text-[1.39vw]  lg:mb-[1.11vw] text-white uppercase text-nowrap ">
                   {step.title}
                 </p>
-                <p className="text-[12px] lg:text-[0.9vw] max-w-[31vw] leading-[120%]  text-[#FFFFFFCC]">
+                <p className="text-[12px] font-haas  lg:text-[1.1111vw] max-w-[31vw] leading-[120%]  text-[#FFFFFFCC]">
                   {step.desc}
                 </p>
               </div>

@@ -1,43 +1,61 @@
 "use client";
 
+import { ReactNode, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { type ReactNode, useEffect } from "react";
-
 import { ReactLenis, useLenis } from "lenis/react";
 
 type SmoothScrollerProps = {
   children: ReactNode;
 };
 
-export default function SmoothScroller({ children }: SmoothScrollerProps) {
+export default function SmoothScroller({
+  children,
+}: SmoothScrollerProps) {
   const pathname = usePathname();
   const lenis = useLenis();
 
   useEffect(() => {
     if (!lenis) return;
 
-    const timeout = setTimeout(() => {
-      lenis.scrollTo(0);
-      lenis.resize();
-    }, 100);
+    // Reset scroll position when route changes
+    lenis.scrollTo(0, {
+      immediate: true,
+    });
 
-    return () => clearTimeout(timeout);
+    // Recalculate page dimensions
+    lenis.resize();
   }, [pathname, lenis]);
 
   return (
     <ReactLenis
       root
       options={{
-        lerp: 0.08,
-        duration: 1.2,
-        wheelMultiplier: 1,
+        // Premium / buttery smooth scrolling
+        lerp: 0.065,
+        duration: 1.3,
+
+        // Scroll speed
+        wheelMultiplier: 0.85,
         touchMultiplier: 1,
+
+        // Normal website scrolling
         infinite: false,
+
+        // Automatically recalculate scroll dimensions
         autoResize: true,
+
+        // Better control on touch devices
         syncTouch: false,
+
+        // Allow nested UI components to handle their own scrolling
         prevent: (node) =>
           !!node?.closest?.(
-            "[data-lenis-prevent], .mantine-Drawer-root, .mantine-Modal-root",
+            [
+              "[data-lenis-prevent]",
+              ".mantine-Drawer-root",
+              ".mantine-Modal-root",
+              "[data-scroll-container]",
+            ].join(", "),
           ),
       }}
     >

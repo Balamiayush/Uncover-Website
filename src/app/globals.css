@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Haas Grot';
+  src: url('/font/HaasGrotText.woff2') format('woff2');
+}
+
 @theme {
   --font-familjen: var(--font-familjen-grotesk), sans-serif;
-  --font-martian-mono: var(--font-martian-mono), monospace;
+  --font-haas: 'Haas Grot', sans-serif;
 }
 
 body {

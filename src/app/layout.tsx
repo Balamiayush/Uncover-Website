@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Familjen_Grotesk, Martian_Mono } from "next/font/google";
+import { Familjen_Grotesk } from "next/font/google";
 import "./globals.css";
 
 import PageTransition from "@/providers/PageTransition";
@@ -12,11 +11,6 @@ const familjenGrotesk = Familjen_Grotesk({
   variable: "--font-familjen-grotesk",
 });
 
-const martianMono = Martian_Mono({
-  subsets: ["latin"],
-  variable: "--font-martian-mono",
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,7 +19,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${familjenGrotesk.variable} ${martianMono.variable} h-full antialiased`}
+      className={`${familjenGrotesk.variable} h-full antialiased`}
     >
       <body suppressHydrationWarning>
         <SmoothScroller>

@@ -1,5 +1,4 @@
 import LayoutWrapper from "@/shared/components/layouts/wrapper/LayoutWrapper";
-import StartAProjectBtn from "@/shared/components/ui/button/StartAProjectBtn";
 import React from "react";
 
 export default function AboutSection() {
@@ -25,7 +24,6 @@ export default function AboutSection() {
             Uncover is a small team of marketing leaders with 10+ years driving
             growth across APAC, EMEA, and North America.
           </p>
-          <StartAProjectBtn variant="black">MORE ABOUT US</StartAProjectBtn>
         </div>
       </LayoutWrapper>
     </div>

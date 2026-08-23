@@ -2,6 +2,7 @@ import React from "react";
 import LayoutWrapper from "../wrapper/LayoutWrapper";
 import Image from "next/image";
 import Button from "../../ui/button/Button";
+import ArrowIcon from "../../icons/ArrowIcon";
 
 export default function MainNavbar() {
   return (
@@ -17,26 +18,9 @@ export default function MainNavbar() {
               className="w-full h-full object-contain"
             />
           </div>
-          <div className=" flex gap-[0.56vw] items-center">
-            <Button>BOOK A DIAGNOSIS</Button>
-            <Button className="" variant="secondary">
-              Menu
-              <div className="ml-2 flex flex-col gap-1 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="12"
-                  fill="none"
-                  viewBox="0 0 16 12"
-                >
-                  <path
-                    stroke="#fff"
-                    strokeLinecap="square"
-                    d="M1.667 3.75h12.666M1.666 8.25h12.667"
-                  ></path>
-                </svg>
-              </div>
-            </Button>
+          <div className=" ">
+            <Button variant="secondary" className=" ">BOOK A DIAGNOSIS <ArrowIcon className="ml-[0.56vw]" /></Button>
+          
           </div>
         </nav>
       </LayoutWrapper>
