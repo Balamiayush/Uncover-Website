@@ -3,4 +3,5 @@ export type NavItem = {
   label: string;
   href?: string;
   children?: NavItem[];
+  isExternal?: boolean;
 };

@@ -10,7 +10,7 @@ export default function HeroSection() {
     <div className="min-h-screen w-full relative bg-black text-white pt-[130px] lg:pt-[9.028vw] pb-8 lg:pb-[3.33vw] flex flex-col justify-between">
       <LayoutWrapper className="flex flex-col justify-between flex-1 w-full">
         <div className="w-full">
-          <h1 className="text-[44px] lg:text-[5vw] xl:text-[5vw] leading-[80%] tracking-[-3px] lg:tracking-[-0.208vw] max-w-[358px] lg:max-w-[47.222vw]">
+          <h1 className="text-[40px] lg:text-[5vw] xl:text-[5vw] leading-[100%] lg:leading-[80%] tracking-[-3px] lg:tracking-[-0.208vw] max-w-[358px] lg:max-w-[47.222vw]">
             Every outcome has variables. We uncover what’s holding you back.
           </h1>
         </div>
@@ -41,7 +41,7 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <div className="flex justify-end  ">
+          <div className=" hidden lg:flex justify-end  ">
             <div className="flex h-[115px] lg:h-[7.986vw] items-center gap-[0.56vw]">
               <div className="w-[115px] lg:w-[7.986vw] h-full bg-blue-500 rounded-l-sm overflow-hidden flex-shrink-0">
                 {/* Place your image here */}

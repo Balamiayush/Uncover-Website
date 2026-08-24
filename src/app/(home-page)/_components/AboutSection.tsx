@@ -1,5 +1,8 @@
+import ArrowIcon from "@/shared/components/icons/ArrowIcon";
 import LayoutWrapper from "@/shared/components/layouts/wrapper/LayoutWrapper";
+import Button from "@/shared/components/ui/button/Button";
 import React from "react";
+
 
 export default function AboutSection() {
   return (
@@ -20,10 +23,15 @@ export default function AboutSection() {
 
         <div className="w-full h-[1px] lg:h-[0.069vw] bg-[#E7E7F1] mt-6 lg:mt-[5vw]" />
         <div className=" mt-6 flex lg:flex-row flex-col justify-between items-start gap-10 lg:gap-0 w-full lg:mt-[5vw]">
-          <p className="text-[14px] lg:text-[1.11vw] max-w-[277px]  lg:max-w-[23.47vw] leading-[120%] uppercase">
-            Uncover is a small team of marketing leaders with 10+ years driving
-            growth across APAC, EMEA, and North America.
+          <p className="text-[14px] lg:text-[1.11vw] max-w-[277px] text-[#000000B2] lg:max-w-[16.4583vw] leading-[120%] uppercase">
+           We ask the right questions on the first call. 
           </p>
+           <Button
+          variant="secondary"
+          className="border-[#007DB0] text-[#007DB0]"
+        >
+          Visit the link here <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
+        </Button>
         </div>
       </LayoutWrapper>
     </div>

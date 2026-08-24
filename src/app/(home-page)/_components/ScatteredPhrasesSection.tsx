@@ -31,114 +31,141 @@ export default function MatterPhysicsCards() {
     if (!sceneRef.current) return;
 
     const container = sceneRef.current;
-    const width = container.clientWidth;
-    const height = container.clientHeight;
+    let engine: Matter.Engine | null = null;
+    let runner: Matter.Runner | null = null;
+    let world: Matter.World | null = null;
+    let animationFrameId: number;
 
-    // 1. Create Engine & World
-    const engine = Matter.Engine.create({
-      gravity: { x: 0, y: 1.2, scale: 0.001 },
-    });
-    const world = engine.world;
-
-    // 2. Add Boundaries (Floor & Walls)
-    const floor = Matter.Bodies.rectangle(
-      width / 2,
-      height + 30,
-      width * 2,
-      60,
-      {
-        isStatic: true,
-        restitution: 0.4,
-      }
-    );
-    const leftWall = Matter.Bodies.rectangle(-30, height / 2, 60, height * 2, {
-      isStatic: true,
-    });
-    const rightWall = Matter.Bodies.rectangle(
-      width + 30,
-      height / 2,
-      60,
-      height * 2,
-      {
-        isStatic: true,
-      }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && !engine) {
+          initPhysics();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
     );
 
-    Matter.World.add(world, [floor, leftWall, rightWall]);
+    observer.observe(container);
 
-    // 3. Create Bodies for DOM Elements
-    const cardBodies: Matter.Body[] = [];
+    const initPhysics = () => {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
 
-    cardsRef.current.forEach((el, index) => {
-      if (!el) return;
+      // 1. Create Engine
+      engine = Matter.Engine.create({
+        gravity: { x: 0, y: 1.2, scale: 0.001 },
+      });
+      world = engine.world;
 
-      const rect = el.getBoundingClientRect();
-      const startX = Math.random() * (width - rect.width) + rect.width / 2;
-      const startY = -100 - index * 120; // Staggered height above canvas
-
-      const body = Matter.Bodies.rectangle(
-        startX,
-        startY,
-        rect.width,
-        rect.height,
+      // 2. Add Boundaries
+      const floor = Matter.Bodies.rectangle(
+        width / 2,
+        height + 30,
+        width * 2,
+        60,
         {
-          restitution: 0.5, // Bounce factor
-          friction: 0.2,
-          frictionAir: 0.02,
-          angle: (Math.random() - 0.5) * 0.5,
+          isStatic: true,
+          restitution: 0.3,
+        }
+      );
+      const leftWall = Matter.Bodies.rectangle(-30, height / 2, 60, height * 2, {
+        isStatic: true,
+      });
+      const rightWall = Matter.Bodies.rectangle(
+        width + 30,
+        height / 2,
+        60,
+        height * 2,
+        {
+          isStatic: true,
         }
       );
 
-      cardBodies.push(body);
-      Matter.World.add(world, body);
-    });
+      Matter.World.add(world, [floor, leftWall, rightWall]);
 
-    // 4. Mouse Drag & Touch Interaction Setup
-    const mouse = Matter.Mouse.create(container);
-    const mouseConstraint = Matter.MouseConstraint.create(engine, {
-      mouse: mouse,
-      constraint: {
-        stiffness: 0.2,
-        render: {
-          visible: false,
-        },
-      },
-    });
+      // 3. Create Rigid Bodies with fixed initial tilt angles
+      const cardBodies: { body: Matter.Body; initialAngle: number }[] = [];
 
-    Matter.World.add(world, mouseConstraint);
+      cardsRef.current.forEach((el, index) => {
+        if (!el) return;
 
-    // Keep mouse synced on page scroll
-    mouse.element.removeEventListener("mousewheel", (mouse as any).mousewheel);
-    mouse.element.removeEventListener("DOMMouseScroll", (mouse as any).mousewheel);
+        const rect = el.getBoundingClientRect();
+        const startX = Math.random() * (width - rect.width) + rect.width / 2;
+        const startY = -120 - index * 90;
 
-    // 5. Runner
-    const runner = Matter.Runner.create();
-    Matter.Runner.run(runner, engine);
+        const initialAngle = (Math.random() - 0.5) * 0.45;
 
-    // 6. Sync Loop (Matter.js Body -> DOM Element position)
-    let animationFrameId: number;
+        const body = Matter.Bodies.rectangle(
+          startX,
+          startY,
+          rect.width,
+          rect.height,
+          {
+            restitution: 0.25,
+            friction: 0.3,
+            frictionAir: 0.02,
+            inertia: Infinity,
+            angle: initialAngle,
+          }
+        );
 
-    const updatePositions = () => {
-      cardBodies.forEach((body, i) => {
-        const el = cardsRef.current[i];
-        if (el) {
-          const { x, y } = body.position;
-          const angle = body.angle;
-          el.style.transform = `translate3d(${x - el.offsetWidth / 2}px, ${
-            y - el.offsetHeight / 2
-          }px, 0px) rotate(${angle}rad)`;
-        }
+        Matter.Body.setInertia(body, Infinity);
+
+        cardBodies.push({ body, initialAngle });
+        Matter.World.add(world!, body);
       });
-      animationFrameId = requestAnimationFrame(updatePositions);
+
+      // 4. Mouse Drag Setup
+      const mouse = Matter.Mouse.create(container);
+      const mouseConstraint = Matter.MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: {
+          stiffness: 0.2,
+          render: {
+            visible: false,
+          },
+        },
+      });
+
+      Matter.World.add(world, mouseConstraint);
+
+      mouse.element.removeEventListener("mousewheel", (mouse as any).mousewheel);
+      mouse.element.removeEventListener("DOMMouseScroll", (mouse as any).mousewheel);
+
+      // 5. Run Engine
+      runner = Matter.Runner.create();
+      Matter.Runner.run(runner, engine);
+
+      // 6. Sync DOM position with static initial tilt
+      const updatePositions = () => {
+        cardBodies.forEach(({ body, initialAngle }, i) => {
+          const el = cardsRef.current[i];
+          if (el) {
+            const { x, y } = body.position;
+
+            Matter.Body.setAngularVelocity(body, 0);
+
+            el.style.transform = `translate3d(${x - el.offsetWidth / 2}px, ${
+              y - el.offsetHeight / 2
+            }px, 0px) rotate(${initialAngle}rad)`;
+          }
+        });
+        animationFrameId = requestAnimationFrame(updatePositions);
+      };
+
+      updatePositions();
     };
 
-    updatePositions();
-
     return () => {
-      cancelAnimationFrame(animationFrameId);
-      Matter.Runner.stop(runner);
-      Matter.World.clear(world, false);
-      Matter.Engine.clear(engine);
+      observer.disconnect();
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      if (runner) Matter.Runner.stop(runner);
+      if (world && engine) {
+        Matter.World.clear(world, false);
+        Matter.Engine.clear(engine);
+      }
     };
   }, []);
 
@@ -155,7 +182,7 @@ export default function MatterPhysicsCards() {
             ref={(el) => {
               cardsRef.current[i] = el;
             }}
-            className={`absolute top-0 left-0 px-4 py-2.5 lg:px-[1.39vw] lg:py-[0.83vw] rounded-md text-[12px] lg:text-[1.11vw] lg:h-[5vw] items-center justify-center flex  leading-[120%] tracking-tight  select-none pointer-events-auto cursor-grab active:cursor-grabbing ${
+            className={`absolute top-0 left-0 px-4 py-2.5 lg:px-[1.39vw] lg:py-[0.83vw] rounded-md text-[12px] lg:text-[1.11vw] lg:h-[5vw] items-center justify-center flex leading-[120%] tracking-tight select-none pointer-events-auto cursor-grab active:cursor-grabbing ${
               isHighlight
                 ? "bg-[#FFD000] text-black font-semibold"
                 : "bg-white text-[#111111]"

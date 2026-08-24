@@ -33,10 +33,10 @@ const buttonStyles = tv({
     },
 
     size: {
-      fixed: "h-[2.778vw] px-[1.25vw] py-[0.833vw] text-[0.972vw]",
-      sm: "px-[0.833vw] py-[0.417vw] text-[0.833vw]",
-      md: "px-[1.111vw] py-[0.556vw] text-[0.972vw]",
-      lg: "px-[1.667vw] py-[0.833vw] text-[1.111vw]",
+      fixed: "h-[40px] lg:h-[2.778vw] px-[18px] lg:px-[1.25vw] py-[12px] lg:py-[0.833vw] text-[14px] lg:text-[0.972vw]",
+      sm: "px-[12px] lg:px-[0.833vw] py-[6px] lg:py-[0.417vw] text-[12px] lg:text-[0.833vw]",
+      md: "px-[16px] lg:px-[1.111vw] py-[8px] lg:py-[0.556vw] text-[14px] lg:text-[0.972vw]",
+      lg: "px-[24px] lg:px-[1.667vw] py-[12px] lg:py-[0.833vw] text-[16px] lg:text-[1.111vw]",
     },
 
     isIconOnly: {
@@ -49,7 +49,7 @@ const buttonStyles = tv({
     {
       size: "fixed",
       isIconOnly: true,
-      className: "h-[2.778vw] px-0 py-0",
+      className: "h-[40px] lg:h-[2.778vw] px-0 py-0",
     },
   ],
 
