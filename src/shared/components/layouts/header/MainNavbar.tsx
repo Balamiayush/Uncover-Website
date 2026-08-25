@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "../../ui/button/Button";
 import ArrowIcon from "../../icons/ArrowIcon";
 import Link from "next/link";
+import HamburgerMenu from "../../icons/HambuggerMenu";
 
 export default function MainNavbar() {
   return (
@@ -21,7 +22,7 @@ export default function MainNavbar() {
           </Link>
           <div className=" ">
             <Button variant="secondary" className=" lg:block hidden ">BOOK A DIAGNOSIS <ArrowIcon className="ml-[0.56vw]" /></Button>
-          
+            <HamburgerMenu className="lg:hidden block"/>
           </div>
         </nav>
       </LayoutWrapper>

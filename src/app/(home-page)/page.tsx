@@ -25,7 +25,7 @@ export default function page() {
       <CeoSection/>
       <IndustriesWeWork />
       <MethodScrollSection />
-      {/* <FAQ/> */}
+      <FAQ/>
     </div>
   );
 }
