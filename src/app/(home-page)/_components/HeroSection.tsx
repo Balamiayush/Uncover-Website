@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen w-full relative bg-black text-white pt-[130px] lg:pt-[9.028vw] pb-8 lg:pb-[3.33vw] flex flex-col justify-between">
+    <div className="min-h-screen  w-full relative bg-[url()] text-white pt-[130px] lg:pt-[9.028vw] pb-8 lg:pb-[3.33vw] flex flex-col justify-between bg-black">
       <LayoutWrapper className="flex flex-col justify-between flex-1 w-full">
         <div className="w-full">
           <h1 className="text-[40px] lg:text-[5vw] xl:text-[5vw] leading-[100%] lg:leading-[80%] tracking-[-3px] lg:tracking-[-0.208vw] max-w-[358px] lg:max-w-[47.222vw]">

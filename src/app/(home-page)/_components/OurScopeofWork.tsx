@@ -95,7 +95,7 @@ export default function OurScopeofWork() {
               <div
                 id="next"
                 onClick={handlePrev}
-                className="border-[0.1042vw] border-solid border-[#00000099] w-[3.75vw] h-[3.75vw] py-[0.6944vw] flex items-end rounded-[0.1389vw] justify-center cursor-pointer select-none hover:bg-black/5 transition-colors"
+                className="border-[0.1042vw] border-r-0 border-solid border-[#00000099] w-[3.75vw] h-[3.75vw] py-[0.6944vw] flex items-end rounded-[0.1389vw] justify-center cursor-pointer select-none hover:bg-black/5 transition-colors"
               >
                 <ArrowIcon className="rotate-180" />
               </div>
