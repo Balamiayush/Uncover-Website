@@ -58,7 +58,7 @@ export default function OurScopeofWork() {
   };
 
   return (
-    <div className="w-full min-h-screen py-[64px] lg:py-[8.33vw] bg-[#F6FAFC]">
+    <div className="w-full lg:min-h-screen py-[64px] lg:py-[8.33vw] bg-[#F6FAFC]">
       <LayoutWrapper className=" ">
         <div className="flex flex-col lg:flex-row w-full justify-between h-full">
           <h3 className="text-[32px] leading-[80%] tracking-[-1px] lg:text-[3.33vw] lg:leading-[80%] lg:tracking-[-2px] text-black">
