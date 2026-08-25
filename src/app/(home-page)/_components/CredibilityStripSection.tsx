@@ -37,12 +37,16 @@ export default function CredibilityStripSection() {
       if (!containerRef.current) return;
 
       const paths = gsap.utils.toArray<SVGPathElement>("#svgLine path");
+      
+      // Dynamic start trigger based on screen width
+      const isMobile = window.innerWidth < 1024;
+      const startPosition = isMobile ? "top top" : "top -10%";
 
       // Pin container and tie timeline to scroll
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top -10%",
+          start: startPosition,
           end: `+=${credibilityData.length * 100}%`,
           pin: true,
           scrub: true,
@@ -64,8 +68,6 @@ export default function CredibilityStripSection() {
         const currentTitle = titlesRef.current[index];
         const currentDesc = descriptionsRef.current[index];
         const currentPath = paths[index];
-
-      
 
         // Fade in current title (opacity 1) and description (opacity 1)
         if (currentTitle && currentDesc) {
@@ -100,31 +102,31 @@ export default function CredibilityStripSection() {
   return (
     <div
       ref={containerRef}
-      className="py-[48px] min-h-screen  lg:py-[8.33vw] w-full bg-white text-black"
+      className="py-[64px] lg:min-h-screen lg:py-[8.33vw] w-full bg-white text-black"
     >
       <LayoutWrapper>
         {/* Header Block */}
         <div className="flex items-end justify-between w-full">
           <div>
-            <p className="text-[3.3333vw] leading-[80%] tracking-[-2px]">
+            <p className="lg:text-[3.3333vw] text-[32px] leading-[80%] tracking-[-2px]">
               Who is this for
             </p>
-            <p className="mt-[32px] max-w-[457px] text-[18px] font-haas text-[#000000A3] leading-[120%]">
+            <p className="mt-[32px] max-w-[457px] lg:block hidden text-[18px] font-haas text-[#000000A3] leading-[120%]">
               A marketing agency diagnosing stalled growth, aligning on issues,
               and driving outcomes.
             </p>
           </div>
           <Button
             variant="secondary"
-            className="border-[#007DB0] text-[#007DB0]"
+            className="border-[#007DB0] text-[#007DB0] lg:block hidden"
           >
             Visit the link here <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
           </Button>
         </div>
 
-        <div className="line w-full h-px bg-[#E7E7F1] mt-20"></div>
+        <div className="line w-full h-px bg-[#E7E7F1] mt-10 lg:mt-20"></div>
 
-        <div className="flex justify-between mt-20">
+        <div className="flex justify-between mt-10 lg:mt-20">
           {/* Vertical SVG Progress Line (Preserved Exact SVG) */}
           <div>
             <svg
@@ -165,8 +167,7 @@ export default function CredibilityStripSection() {
             </svg>
           </div>
 
-          {/* Titles Column */}
-          <div className="flex flex-col gap-[8.19vw] w-[31.74vw] text-center">
+          <div className="flex flex-col lg:gap-[8.19vw] lg:w-[31.74vw] gap-[128px] text-center">
             {credibilityData.map((item, index) => (
               <div
                 key={index}
@@ -182,8 +183,7 @@ export default function CredibilityStripSection() {
             ))}
           </div>
 
-          {/* Descriptions Column */}
-          <div className="flex flex-col gap-[7.22vw] lg:max-w-[31.74vw]">
+          <div className="flex flex-col gap-[7.22vw] max-w-[168px] lg:max-w-[31.74vw]">
             {credibilityData.map((item, index) => (
               <div
                 key={index}
@@ -199,6 +199,12 @@ export default function CredibilityStripSection() {
             ))}
           </div>
         </div>
+        <Button
+          variant="secondary"
+          className="border-[#007DB0] text-[#007DB0] lg:hidden mt-10 w-full"
+        >
+          BOOK A DIAGNOSIS <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
+        </Button>
       </LayoutWrapper>
     </div>
   );

@@ -29,7 +29,7 @@ export default function AboutSection() {
           </p>
           <Button
             variant="secondary"
-            className="border-[#007DB0] w-full text-[#007DB0]"
+            className="border-[#007DB0] max-lg:w-full text-[#007DB0]"
           >
             BOOK A DIAGNOSIS <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
           </Button>

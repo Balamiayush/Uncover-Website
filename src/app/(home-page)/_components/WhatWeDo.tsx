@@ -18,7 +18,7 @@ export default function WhatWeDo() {
             </p>
             <Button
               variant="secondary"
-              className="border-[#007DB0] text-[#007DB0]"
+              className="border-[#007DB0] text-[#007DB0] max-lg:hidden"
             >
               Visit the link here <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
             </Button>
@@ -43,8 +43,6 @@ export default function WhatWeDo() {
               </p>
             </div>
 
-      
-
             {/* Alignment Workshop */}
             <div className="py-5 px-[20px] gap-[48px] lg:p-[1.9444vw] lg:gap-[2.2222vw] rounded-b-[0.2778vw] w-full flex flex-col bg-[#F6FAFC]">
               <p className="lg:text-[1.9444vw] text-[24px] leading-[100%] tracking-[-0.0694vw]  text-black">
@@ -60,6 +58,12 @@ export default function WhatWeDo() {
               </div>
             </div>
           </div>
+          <Button
+            variant="secondary"
+            className="border-[#007DB0] text-[#007DB0] lg:hidden "
+          >
+            Visit the link here <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
+          </Button>
         </div>
       </LayoutWrapper>
     </div>

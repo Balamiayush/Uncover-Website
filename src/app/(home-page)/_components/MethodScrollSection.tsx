@@ -91,7 +91,7 @@ export default function MethodScrollSection() {
           <p className="text-[14px] lg:text-[0.972vw] text-[#FFD900] font-familjen uppercase">
             THE METHOD
           </p>
-          <h2 className="text-[32px] mt-6 leading-[80%] tracking-[-2px] lg:text-[3.33vw] text-white">
+          <h2 className="text-[32px] max-lg:w-[358px] mt-4 lg:mt-[1.6667vw] leading-[80%] tracking-[-2px] lg:text-[3.33vw] text-white">
             80% Diagnosis. 20% Execution
           </h2>
           <p className="text-[1.25vw] lg:block hidden text-[#FFFFFFB8] mt-8">
@@ -152,7 +152,7 @@ export default function MethodScrollSection() {
                 <p className="text-[14px] lg:text-[1.39vw]  lg:mb-[1.11vw] text-white uppercase text-nowrap ">
                   {step.title}
                 </p>
-                <p className="text-[12px] font-haas  lg:text-[1.1111vw] max-w-[31vw] leading-[120%]  text-[#FFFFFFCC]">
+                <p className="text-[12px] lg:block hidden font-haas  lg:text-[1.1111vw] max-w-[31vw] leading-[120%]  text-[#FFFFFFCC]">
                   {step.desc}
                 </p>
               </div>

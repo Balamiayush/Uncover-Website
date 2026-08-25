@@ -39,11 +39,11 @@ export default function WeBuildUncoverSection() {
             money, time, and confidence.
           </span>
         </TextRevealOpacity>
-        <div className=" items-center flex w-full justify-center lg:gap-[0.69vw] lg:mt-[3.89vw] flex-col gap-3 " >
-          <Button className="w-full" variant="primary">
+        <div className=" items-center flex  w-full justify-center lg:gap-[0.69vw] lg:mt-[3.89vw] max-lg:flex-col gap-3 " >
+          <Button className="max-lg:w-full" variant="primary">
             START A PROJECT <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
           </Button>
-          <Button className="w-full" variant="secondary">
+          <Button className="max-lg:w-full" variant="secondary">
             Contact Us <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
           </Button>
         </div>

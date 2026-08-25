@@ -21,11 +21,11 @@ export default function page() {
       <WhatWeDo />
       <OurScopeofWork/>
       <WeBuildUncoverSection/>
-      {/* <CredibilityStripSection /> */}
-      {/* <CeoSection/> */}
-      {/* <IndustriesWeWork /> */}
+      <CredibilityStripSection />
+      <CeoSection/>
+      <IndustriesWeWork />
+      <MethodScrollSection />
       {/* <FAQ/> */}
-      {/* <MethodScrollSection /> */}
     </div>
   );
 }
