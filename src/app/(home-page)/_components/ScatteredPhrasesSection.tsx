@@ -44,7 +44,7 @@ export default function MatterPhysicsCards() {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     observer.observe(container);
@@ -68,11 +68,17 @@ export default function MatterPhysicsCards() {
         {
           isStatic: true,
           restitution: 0.3,
-        }
+        },
       );
-      const leftWall = Matter.Bodies.rectangle(-30, height / 2, 60, height * 2, {
-        isStatic: true,
-      });
+      const leftWall = Matter.Bodies.rectangle(
+        -30,
+        height / 2,
+        60,
+        height * 2,
+        {
+          isStatic: true,
+        },
+      );
       const rightWall = Matter.Bodies.rectangle(
         width + 30,
         height / 2,
@@ -80,7 +86,7 @@ export default function MatterPhysicsCards() {
         height * 2,
         {
           isStatic: true,
-        }
+        },
       );
 
       Matter.World.add(world, [floor, leftWall, rightWall]);
@@ -108,7 +114,7 @@ export default function MatterPhysicsCards() {
             frictionAir: 0.02,
             inertia: Infinity,
             angle: initialAngle,
-          }
+          },
         );
 
         Matter.Body.setInertia(body, Infinity);
@@ -131,8 +137,14 @@ export default function MatterPhysicsCards() {
 
       Matter.World.add(world, mouseConstraint);
 
-      mouse.element.removeEventListener("mousewheel", (mouse as any).mousewheel);
-      mouse.element.removeEventListener("DOMMouseScroll", (mouse as any).mousewheel);
+      mouse.element.removeEventListener(
+        "mousewheel",
+        (mouse as any).mousewheel,
+      );
+      mouse.element.removeEventListener(
+        "DOMMouseScroll",
+        (mouse as any).mousewheel,
+      );
 
       // 5. Run Engine
       runner = Matter.Runner.create();
@@ -182,10 +194,10 @@ export default function MatterPhysicsCards() {
             ref={(el) => {
               cardsRef.current[i] = el;
             }}
-            className={`absolute top-0 left-0 px-4 py-2.5 lg:px-[1.39vw] lg:py-[0.83vw] rounded-md text-[12px] lg:text-[1.11vw] lg:h-[5vw] items-center justify-center flex leading-[120%] tracking-tight select-none pointer-events-auto cursor-grab active:cursor-grabbing ${
+            className={`absolute top-0 left-0 px-4 py-2.5 lg:px-[1.39vw] lg:py-[0.83vw] rounded-md text-[14px] lg:text-[1.11vw] lg:h-[5vw] items-center justify-center flex leading-[120%] tracking-tight select-none pointer-events-auto cursor-grab active:cursor-grabbing max-lg:w-[172px] ${
               isHighlight
-                ? "bg-[#FFD000] text-black font-semibold"
-                : "bg-white text-[#111111]"
+                ? "bg-[#FFD000] text-black"
+                : "bg-white"
             }`}
             style={{
               willChange: "transform",

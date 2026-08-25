@@ -19,7 +19,7 @@ export default function TheProblemSection() {
         </p>
 
         <TextRevealOpacity
-          as="h2"
+          as="h2"   
           type="words"
           scroll="scrub"
           triggerRef={sectionRef}
@@ -28,7 +28,7 @@ export default function TheProblemSection() {
           scrubSmoothness={0.5}
           stagger={0.03}
           initialOpacity={0.15}
-          className="mx-auto mt-12 mb-10 max-w-[1312px] text-[32px] leading-[120%] tracking-[-0.04em] lg:mt-[3.333vw] lg:mb-[2.778vw] lg:max-w-[91.111vw] lg:text-[3.333vw] lg:tracking-[-0.139vw]"
+          className="mx-auto mt-[24px] mb-10  text-[32px] leading-[120%] tracking-[-0.04em] lg:mt-[3.333vw] lg:mb-[2.778vw] lg:max-w-[91.111vw] lg:text-[3.333vw] lg:tracking-[-0.139vw]"
         >
           Audits show what happened, diagnosis shows why and what to do next.
           Most marketing reports track activity, and most budgets follow last

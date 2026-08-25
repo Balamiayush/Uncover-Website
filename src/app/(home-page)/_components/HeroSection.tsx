@@ -7,35 +7,40 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="min-h-screen  w-full relative bg-[url()] text-white pt-[130px] lg:pt-[9.028vw] pb-8 lg:pb-[3.33vw] flex flex-col justify-between bg-black">
-      <LayoutWrapper className="flex flex-col justify-between flex-1 w-full">
-        <div className="w-full">
+    <div className="h-full  w-full relative bg-[url()] text-white pt-[130px] lg:pt-[9.028vw] pb-[52px] lg:pb-[3.33vw]  ">
+      <Image
+        fill
+        className=" object-cover"
+        src={"/images/hero-section-img/hero-section-bg.png"}
+        alt=""
+      />
+
+      <LayoutWrapper className=" w-full relative z-10">
+        <div className="">
           <h1 className="text-[40px] lg:text-[5vw] xl:text-[5vw] leading-[100%] lg:leading-[80%] tracking-[-3px] lg:tracking-[-0.208vw] max-w-[358px] lg:max-w-[47.222vw]">
             Every outcome has variables. We uncover what’s holding you back.
           </h1>
         </div>
 
-        <div className="relative w-full flex justify-center items-center my-auto py-6">
-          <div className="w-[12vw] h-[12vw] relative">
-            {/* Example: <Image src="/images/hero-u-logo.png" fill alt="U Logo" className="object-contain" /> */}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-3 w-full items-end">
-          <div className="flex justify-start">
-            <Button
-              variant="secondary"
-              isIconOnly
-              direction="down"
-              className="w-[2.778vw] h-[2.778vw]"
-            >
-              <ArrowIcon className="rotate-90" />
-            </Button>
+        <div className="grid grid-cols-1 lg:grid-cols-3 w-full lg:items-end items-center mt-[48px] lg:mt-[4.0278vw] ">
+          <div className="lg:flex hidden justify-start">
+            <div className="w-[40px] h-[40px]  lg:w-[2.778vw] lg:h-[2.778vw] border rounded-full flex items-center justify-center cursor-pointer">
+              <TextSlide>
+                <ArrowIcon className="rotate-90 " />
+              </TextSlide>
+            </div>
           </div>
 
-          {/* Center: Subtitle Text */}
-          <div className="flex justify-center">
-            <p className="lg:max-w-[19.86vw] max-w-[20.208vw] text-center lg:text-[1.25vw] text-[0.972vw] text-white leading-[110%] font-normal">
+          <div className="flex justify-center max-lg:gap-[48px] flex-col items-center">
+            <div className="lg:w-[19.583vw] lg:h-[22.153vw] w-[190px] h-[207px] relative">
+              <Image
+                fill
+                alt=""
+                className="object-cover"
+                src="https://res.cloudinary.com/dfajjqglx/image/upload/v1787649245/image_1_t2nsgn.png"
+              />
+            </div>
+            <p className="lg:max-w-[19.86vw] max-w-[286px] text-center lg:text-[1.25vw] text-[18px] text-white leading-[110%] font-normal">
               Most businesses find out the problem, after the budget is already
               gone.
             </p>
@@ -53,7 +58,7 @@ export default function HeroSection() {
                     New Case Study
                   </p>
                   <TextSlide>
-                    <ArrowIcon className="rotate-180 w-4 h-4 lg:w-[1.111vw] lg:h-[1.111vw]" />
+                    <ArrowIcon className="" />
                   </TextSlide>
                 </div>
 
