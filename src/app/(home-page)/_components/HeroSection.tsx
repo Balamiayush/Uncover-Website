@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="h-full  w-full relative bg-[url()] text-white pt-[130px] lg:pt-[9.028vw] pb-[52px] lg:pb-[3.33vw]  ">
+    <div className="h-full  w-full relative  text-white pt-[130px] lg:pt-[9.028vw] pb-[52px] lg:pb-[3.33vw]  ">
       <Image
         fill
         className=" object-cover"
@@ -48,11 +48,10 @@ export default function HeroSection() {
 
           <div className=" hidden lg:flex justify-end  ">
             <div className="flex h-[115px] lg:h-[7.986vw] items-center gap-[0.56vw]">
-              <div className="w-[115px] lg:w-[7.986vw] h-full bg-blue-500 rounded-l-sm overflow-hidden flex-shrink-0">
+              <div className="w-[115px] lg:w-[7.986vw] h-full bg-blue-500 rounded-sm overflow-hidden flex-shrink-0">
                 {/* Place your image here */}
               </div>
-
-              <div className="w-[238px] lg:w-[16.528vw] h-full bg-white text-black p-[1.111vw] flex flex-col justify-between flex-shrink-0 rounded-r-sm">
+              <div className="w-[238px] lg:w-[16.528vw] h-full bg-white text-black p-[1.111vw] flex flex-col justify-between flex-shrink-0 rounded-sm">
                 <div className="flex items-center justify-between">
                   <p className="text-[18px] lg:text-[1.25vw] font-medium leading-[80%]">
                     New Case Study
@@ -61,7 +60,6 @@ export default function HeroSection() {
                     <ArrowIcon className="" />
                   </TextSlide>
                 </div>
-
                 <div className="flex flex-col gap-[0.278vw]">
                   <p className="text-[16px] lg:text-[1.111vw] font-medium leading-[100%]">
                     Marketing
