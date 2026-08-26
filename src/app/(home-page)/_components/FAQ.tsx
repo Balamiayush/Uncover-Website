@@ -114,7 +114,7 @@ export default function FAQ() {
                     animate={{ rotate: isOpen ? 0 : 180 }}
                     transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
                   >
-                    <ArrowIcon className="w-[16px] h-[16px] -rotate-90 lg:w-[1.67vw] lg:h-[1.67vw]" />
+                    <ArrowIcon className="w-[20px] h-[20px] -rotate-90 lg:w-[1.67vw] lg:h-[1.67vw]" />
                   </motion.div>
                 </button>
 
