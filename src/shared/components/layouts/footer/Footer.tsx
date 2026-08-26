@@ -5,6 +5,8 @@ import { NavItem } from "@/shared/types/navigation";
 import ArrowIcon from "../../icons/ArrowIcon";
 import TextSlide from "../../ui/TextHoverAnim/TextSlide";
 import FooterLogo from "../../icons/FooterLogo";
+import Image from "next/image";
+
 
 export interface FooterNavigation {
   socials: NavItem[];
@@ -18,10 +20,16 @@ export const FOOTER_NAVIGATION: FooterNavigation = {
 
 export default function Footer() {
   return (
-    <div className="pt-16 pb-6 overflow-x-hidden lg:pt-[4.44vw] lg:pb-[2.22vw] bg-black">
+    <div className="pt-16 pb-6 overflow-x-hidden  relative lg:pt-[4.44vw] lg:pb-[2.22vw] bg-black">
+    <Image
+        fill
+        className=" object-cover"
+        src={"/images/hero-section-img/hero-section-bg.png"}
+        alt=""
+      />
       <LayoutWrapper>
         <div className="border border-white/20 grid grid-cols-1 md:grid-cols-3">
-          <div className="flex flex-col gap-[60px] lg:gap-[3vw] p-8 lg:p-[3.33vw] border-b md:border-b-0 md:border-r border-white/20">
+          <div className="flex flex-col gap-[60px] lg:gap-[3vw] max-lg:h-[276px] p-8 lg:p-[3.33vw] border-b md:border-b-0 md:border-r border-white/20">
             <p className="lg:text-[1.11vw] text-[14px] uppercase text-[#FFD900]">
               SITE
             </p>
@@ -40,7 +48,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[60px] lg:gap-[3vw] p-8 lg:p-[3.33vw] border-b md:border-b-0 md:border-r border-white/20">
+          <div className="flex flex-col gap-[60px]    max-lg:h-[276px] lg:gap-[3vw] p-8 lg:p-[3.33vw] border-b md:border-b-0 md:border-r border-white/20">
             <p className="lg:text-[1.11vw] text-[14px] uppercase text-[#FFD900]">
               SOCIALS
             </p>
@@ -67,7 +75,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="SEND AN EMAIL"
-                className="bg-transparent text-[#fff] lg:text-[1.11vw] text-[14px] uppercase font-mono focus:outline-none w-full placeholder:text-white/60"
+                className="bg-transparent text-[#fff] lg:text-[1.11vw] text-[14px] uppercase font-mono focus:outline-none w-full placeholder:text-white"
               />
               <button
                 type="submit"

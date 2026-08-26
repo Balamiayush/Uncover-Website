@@ -80,9 +80,7 @@ export default function FAQ() {
       <LayoutWrapper className="flex flex-col lg:flex-row justify-between w-full gap-10 lg:gap-0">
         <div>
           <div className="">
-            <p className="lg:text-[3.33vw] text-[32px] leading-[80%]  ">
-              FAQs
-            </p>
+            <p className="lg:text-[3.33vw] text-[32px] leading-[80%]  ">FAQs</p>
           </div>
 
           <div className=" mt-[24px] lg:block hidden lg:mt-[1.66vw] max-w-[325px] lg:max-w-[22.57vw]">
