@@ -107,14 +107,14 @@ export default function FAQ() {
                   onClick={() => toggleFAQ(item.id)}
                   className="flex items-center w-full justify-between text-left focus:outline-none cursor-pointer"
                 >
-                  <p className="text-[18px] lg:text-[1.67vw]  leading-[120%]">
+                  <p className="text-[20px] lg:text-[1.67vw]  leading-[120%]">
                     {item.question}
                   </p>
                   <motion.div
                     animate={{ rotate: isOpen ? 0 : 180 }}
                     transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
                   >
-                    <ArrowIcon className="w-[16px] h-[16px] -rotate-90 lg:w-[1.11vw] lg:h-[1.11vw]" />
+                    <ArrowIcon className="w-[16px] h-[16px] -rotate-90 lg:w-[1.67vw] lg:h-[1.67vw]" />
                   </motion.div>
                 </button>
 
@@ -132,7 +132,7 @@ export default function FAQ() {
                           variants={textRevealVariant}
                           initial="hidden"
                           animate="visible"
-                          className="leading-[120%] text-[20px] lg:text-[1.11vw] text-[#000000B8] font-haas"
+                          className="leading-[120%]  lg:text-[1.11vw] text-[#000000B8] font-haas"
                         >
                           {item.answer}
                         </motion.p>
