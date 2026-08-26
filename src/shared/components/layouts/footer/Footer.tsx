@@ -21,7 +21,7 @@ export default function Footer() {
     <div className="pt-16 pb-6 overflow-x-hidden lg:pt-[4.44vw] lg:pb-[2.22vw] bg-black">
       <LayoutWrapper>
         <div className="border border-white/20 grid grid-cols-1 md:grid-cols-3">
-          <div className="flex flex-col gap-[5vw] lg:gap-[3vw] p-8 lg:p-[3.33vw] border-b md:border-b-0 md:border-r border-white/20">
+          <div className="flex flex-col gap-[60px] lg:gap-[3vw] p-8 lg:p-[3.33vw] border-b md:border-b-0 md:border-r border-white/20">
             <p className="lg:text-[1.11vw] text-[14px] uppercase text-[#FFD900]">
               SITE
             </p>
@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-[5vw] lg:gap-[3vw] p-8 lg:p-[3.33vw] border-b md:border-b-0 md:border-r border-white/20">
+          <div className="flex flex-col gap-[60px] lg:gap-[3vw] p-8 lg:p-[3.33vw] border-b md:border-b-0 md:border-r border-white/20">
             <p className="lg:text-[1.11vw] text-[14px] uppercase text-[#FFD900]">
               SOCIALS
             </p>
@@ -59,7 +59,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col  gap-[4.17vw] lg:gap-[5vw] p-8 lg:p-[3.33vw]">
+          <div className="flex flex-col  gap-[60px] h-[276px] lg:gap-[5vw] p-8 lg:p-[3.33vw]">
             <p className="lg:text-[1.11vw] text-[14px] uppercase text-[#FFD900]">
               SUBSCRIBE TO NEWSLETTER
             </p>
@@ -82,13 +82,19 @@ export default function Footer() {
           </div>
         </div>
         <div className="logo w-full lg:mt-[3.33vw] mt-[32px]">
-          <FooterLogo/>
+          <FooterLogo />
         </div>
-        <div className=" flex w-full justify-between  lg:mt-[3.33vw] mt-[32px] flex-wrap">
-          <p className="text-[#FFFFFFB2] text-[12px]  lg:text-[0.97vw] uppercase  leading-0">© 2026 Uncover. All rights reserved.</p>
-          <p className="text-[#FFFFFFB2] text-[12px]  lg:text-[0.97vw] uppercase  leading-0">Terms and Conditions</p>
-          <p className="text-[#FFFFFFB2] text-[12px]  lg:text-[0.97vw] uppercase  leading-0">Privacy Policy</p>
-         
+        <div className="flex w-full flex-wrap justify-between gap-y-2 lg:mt-[3.33vw] mt-[32px]">
+          <p className="text-[#FFFFFFB2] text-[12px] lg:text-[0.97vw] uppercase leading-none w-full ">
+            © 2026 Uncover{" "}
+            <span className="hidden lg:block">.All rights reserved.</span>
+          </p>
+          <p className="text-[#FFFFFFB2] text-[12px] lg:text-[0.97vw] uppercase leading-none">
+            Terms and Conditions
+          </p>
+          <p className="text-[#FFFFFFB2] text-[12px] lg:text-[0.97vw] uppercase leading-none">
+            Privacy Policy
+          </p>
         </div>
       </LayoutWrapper>
     </div>
