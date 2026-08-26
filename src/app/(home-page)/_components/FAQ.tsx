@@ -132,7 +132,7 @@ export default function FAQ() {
                           variants={textRevealVariant}
                           initial="hidden"
                           animate="visible"
-                          className="leading-[120%] text-[14px] lg:text-[1.11vw] text-[#000000B8] font-haas"
+                          className="leading-[120%] text-[20px] lg:text-[1.11vw] text-[#000000B8] font-haas"
                         >
                           {item.answer}
                         </motion.p>
