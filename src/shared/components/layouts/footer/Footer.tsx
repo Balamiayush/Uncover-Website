@@ -84,10 +84,12 @@ export default function Footer() {
         <div className="logo w-full lg:mt-[3.33vw] mt-[32px]">
           <FooterLogo />
         </div>
-        <div className="flex w-full flex-wrap justify-between gap-y-2 lg:mt-[3.33vw] mt-[32px]">
-          <p className="text-[#FFFFFFB2] text-[12px] lg:text-[0.97vw] uppercase leading-none w-full ">
-            © 2026 Uncover{" "}
-            <span className="hidden lg:block">.All rights reserved.</span>
+        <div className=" flex justify-between  max-lg:gap-y-2 lg:mt-[3.33vw] mt-[32px]">
+          <p className="text-[#FFFFFFB2] text-[12px] lg:block hidden lg:text-[0.97vw] uppercase leading-none ">
+            © 2026 Uncover{" "}. All rights reserved.
+          </p>
+          <p className="text-[#FFFFFFB2] lg:hidden block text-[12px] lg:text-[0.97vw] uppercase leading-none ">
+            © 2026 Uncover
           </p>
           <p className="text-[#FFFFFFB2] text-[12px] lg:text-[0.97vw] uppercase leading-none">
             Terms and Conditions
