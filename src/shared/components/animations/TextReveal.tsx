@@ -55,8 +55,8 @@ export default function TextReveal({
           const split = new SplitText(element, {
             type: "lines",
             mask: "lines",
-            linesClass: "line++",
-            lineThreshold: 0.1,
+            linesClass: "split-line",
+           
           });
 
           const splitLines = split.lines as HTMLElement[];

@@ -37,7 +37,7 @@ export default function CredibilityStripSection() {
       if (!containerRef.current) return;
 
       const paths = gsap.utils.toArray<SVGPathElement>("#svgLine path");
-      
+
       // Dynamic start trigger based on screen width
       const isMobile = window.innerWidth < 1024;
       const startPosition = isMobile ? "top top" : "top -10%";
@@ -78,7 +78,7 @@ export default function CredibilityStripSection() {
               duration: 0.5,
               ease: "power1.inOut",
             },
-            "<"
+            "<",
           );
         }
 
@@ -91,12 +91,12 @@ export default function CredibilityStripSection() {
               duration: 0.5,
               ease: "power1.inOut",
             },
-            "<"
+            "<",
           );
         }
       });
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (
@@ -192,7 +192,7 @@ export default function CredibilityStripSection() {
                 }}
                 className="opacity-30"
               >
-                <p className="text-[14px] lg:text-[1.111vw] text-black/60 leading-[130%] lg:leading-[120%]">
+                <p className="text-[14px] font-haas lg:text-[1.111vw] text-black/60 leading-[130%] lg:leading-[120%]">
                   {item.description}
                 </p>
               </div>

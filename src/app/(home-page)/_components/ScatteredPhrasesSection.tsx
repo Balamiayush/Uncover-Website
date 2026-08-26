@@ -194,9 +194,9 @@ export default function MatterPhysicsCards() {
             ref={(el) => {
               cardsRef.current[i] = el;
             }}
-            className={`absolute top-0 left-0 px-4 py-2.5 lg:px-[1.39vw] lg:py-[0.83vw] rounded-md text-[14px] lg:text-[1.11vw] lg:h-[5vw] items-center justify-center flex leading-[120%] tracking-tight select-none pointer-events-auto cursor-grab active:cursor-grabbing max-lg:w-[172px] ${
+            className={`absolute top-0 left-0 px-4 py-2.5 lg:px-[1.39vw] lg:py-[0.83vw] rounded-md text-[14px] lg:text-[1.11vw] lg:h-[5vw] items-center justify-center flex leading-[120%] tracking-tight select-none pointer-events-auto cursor-grab font-haas active:cursor-grabbing max-lg:w-[172px] ${
               isHighlight
-                ? "bg-[#FFD000] text-black"
+                ? "bg-[#FFD000] text-black text-[20px] font-familjen"
                 : "bg-white"
             }`}
             style={{

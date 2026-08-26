@@ -107,7 +107,7 @@ export default function FAQ() {
                   onClick={() => toggleFAQ(item.id)}
                   className="flex items-center w-full justify-between text-left focus:outline-none cursor-pointer"
                 >
-                  <p className="text-[18px] lg:text-[1.25vw]  leading-[120%]">
+                  <p className="text-[18px] lg:text-[1.67vw]  leading-[120%]">
                     {item.question}
                   </p>
                   <motion.div
