@@ -18,7 +18,7 @@ export const FOOTER_NAVIGATION: FooterNavigation = {
 
 export default function Footer() {
   return (
-    <div className="pt-16 lg:pt-[4.44vw] lg:pb-[2.22vw] bg-black">
+    <div className="pt-16 pb-6 overflow-x-hidden lg:pt-[4.44vw] lg:pb-[2.22vw] bg-black">
       <LayoutWrapper>
         <div className="border border-white/20 grid grid-cols-1 md:grid-cols-3">
           <div className="flex flex-col gap-[5vw] lg:gap-[3vw] p-8 lg:p-[3.33vw] border-b md:border-b-0 md:border-r border-white/20">
@@ -84,7 +84,7 @@ export default function Footer() {
         <div className="logo w-full lg:mt-[3.33vw] mt-[32px]">
           <FooterLogo/>
         </div>
-        <div className=" flex w-full justify-between  lg:mt-[3.33vw] mt-[32px]">
+        <div className=" flex w-full justify-between  lg:mt-[3.33vw] mt-[32px] flex-wrap">
           <p className="text-[#FFFFFFB2] text-[12px]  lg:text-[0.97vw] uppercase  leading-0">© 2026 Uncover. All rights reserved.</p>
           <p className="text-[#FFFFFFB2] text-[12px]  lg:text-[0.97vw] uppercase  leading-0">Terms and Conditions</p>
           <p className="text-[#FFFFFFB2] text-[12px]  lg:text-[0.97vw] uppercase  leading-0">Privacy Policy</p>

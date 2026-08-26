@@ -1,5 +1,6 @@
 import AboutSection from "./_components/AboutSection";
 import CeoSection from "./_components/CeoSection";
+import ContactUsSection from "./_components/ContactUsSection";
 import CredibilityStripSection from "./_components/CredibilityStripSection";
 import FAQ from "./_components/FAQ";
 import HeroSection from "./_components/HeroSection";
@@ -25,6 +26,7 @@ export default function page() {
       <CeoSection/>
       <IndustriesWeWork />
       <MethodScrollSection />
+      <ContactUsSection/>
       <FAQ/>
     </div>
   );

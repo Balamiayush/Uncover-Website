@@ -5,7 +5,7 @@ import { TextSlideProps } from "../TextHoverAnim/TextSlide";
 
 const buttonStyles = tv({
   base: [
-    "relative inline-flex  items-center justify-center font-haas  overflow-hidden",
+    "relative inline-flex  items-center justify-center font-haas   overflow-hidden",
     "uppercase cursor-pointer select-none z-10 ",
     "transition-all duration-500 active:scale-[0.98]",
     "ease-[cubic-bezier(0.165,0.84,0.44,1)]",
@@ -22,7 +22,7 @@ const buttonStyles = tv({
       primary: "bg-white text-black after:bg-white hover:bg-neutral-100",
 
       secondary:
-        "bg-transparent text-white border border-white after:bg-white/5 ",
+        "bg-transparent text-white border border-white after:bg-white/5  ",
 
       tertiary:
         "bg-white/10 text-white border border-white/10 after:bg-white/10 hover:bg-white/20",
