@@ -24,8 +24,7 @@ export default function WhatWeDo() {
             </Button>
           </div>
 
-          <div className="   lg:w-[49.6528vw] flex flex-col gap-[2px] bg-[#E7E7F1] rounded-[0.2778vw]">
-            {/* Discovery Call */}
+          <div className=" md:w-full  lg:w-[49.6528vw] flex flex-col gap-[2px] bg-[#E7E7F1] rounded-[0.2778vw]">
             <div className="p-5 w-full gap-[48px] lg:p-[1.9444vw] lg:gap-[2.2222vw] rounded-t-[0.2778vw] w-full flex flex-col bg-[#F6FAFC]">
               <p className="lg:text-[1.9444vw] text-[24px] leading-[100%] tracking-[-0.0694vw]  text-black">
                 Discovery Call
@@ -43,7 +42,6 @@ export default function WhatWeDo() {
               </p>
             </div>
 
-            {/* Alignment Workshop */}
             <div className="py-5 w-full px-[20px] gap-[48px] lg:p-[1.9444vw] lg:gap-[2.2222vw] rounded-b-[0.2778vw] w-full flex flex-col bg-[#F6FAFC]">
               <p className="lg:text-[1.9444vw] text-[24px] leading-[100%] tracking-[-0.0694vw]  text-black">
                 Alignment Workshop

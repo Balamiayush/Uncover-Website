@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Matter from "matter-js";
 
 const PHRASES = [
@@ -26,6 +26,22 @@ const PHRASES = [
 export default function MatterPhysicsCards() {
   const sceneRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [activePhrases, setActivePhrases] = useState(PHRASES);
+
+  // Handle responsive slicing for mobile (e.g., width < 768px)
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setActivePhrases(PHRASES.slice(0, 12));
+      } else {
+        setActivePhrases(PHRASES);
+      }
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!sceneRef.current) return;
@@ -99,7 +115,7 @@ export default function MatterPhysicsCards() {
 
         const rect = el.getBoundingClientRect();
         const startX = Math.random() * (width - rect.width) + rect.width / 2;
-        const startY = -120 - index * 90;
+        const startY = -120 - index * 100;
 
         const initialAngle = (Math.random() - 0.5) * 0.45;
 
@@ -179,14 +195,14 @@ export default function MatterPhysicsCards() {
         Matter.Engine.clear(engine);
       }
     };
-  }, []);
+  }, [activePhrases]);
 
   return (
     <section
       ref={sceneRef}
       className="relative w-full h-screen bg-[#1A1A1A] overflow-hidden"
     >
-      {PHRASES.map((text, i) => {
+      {activePhrases.map((text, i) => {
         const isHighlight = text === "That's exactly what we diagnose.";
         return (
           <div
@@ -194,9 +210,9 @@ export default function MatterPhysicsCards() {
             ref={(el) => {
               cardsRef.current[i] = el;
             }}
-            className={`absolute top-0 left-0 px-4 py-2.5 lg:px-[1.39vw] lg:py-[0.83vw] rounded-md text-[14px] lg:text-[1.11vw] lg:h-[5vw] items-center justify-center flex leading-[120%] tracking-tight select-none pointer-events-auto cursor-grab font-haas active:cursor-grabbing max-lg:w-[172px] ${
+            className={`absolute top-0 left-0 px-4 py-2.5 lg:px-[1.39vw] lg:py-[0.83vw] rounded-md text-[14px] lg:text-[1.11vw] lg:h-[5vw] items-center justify-center flex leading-[120%] tracking-tight select-none pointer-events-auto cursor-grab font-haas active:cursor-grabbing max-lg:w-[230px] ${
               isHighlight
-                ? "bg-[#FFD000] text-black text-[20px] font-familjen!"
+                ? "bg-[#FFD000] text-black lg:text-[20px] text-[16px] font-familjen!"
                 : "bg-white"
             }`}
             style={{

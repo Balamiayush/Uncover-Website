@@ -69,7 +69,7 @@ export default function ContactUsSection() {
 
               <Button
                 variant="secondary"
-                className="w-full lg:w-fit border-[#007DB0] text-[#007DB0] mt-10 lg:mt-[2.78vw]"
+                className="max-md:w-full md:w-fit border-[#007DB0] text-[#007DB0] mt-10 lg:mt-[2.78vw]"
               >
                 BOOK A DIAGNOSIS <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
               </Button>

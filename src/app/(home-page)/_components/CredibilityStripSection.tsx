@@ -127,8 +127,7 @@ export default function CredibilityStripSection() {
         <div className="line w-full h-px bg-[#E7E7F1] mt-10 lg:mt-20"></div>
 
         <div className="flex justify-between mt-10 lg:mt-20">
-          {/* Vertical SVG Progress Line (Preserved Exact SVG) */}
-          <div>
+            <div>
             <svg
               id="svgLine"
               width="11"
@@ -183,7 +182,7 @@ export default function CredibilityStripSection() {
             ))}
           </div>
 
-          <div className="flex flex-col gap-[7.22vw] max-w-[168px] lg:max-w-[31.74vw]">
+          <div className="flex flex-col gap-[7.22vw] md:max-w-[300px] max-w-[168px] lg:max-w-[31.74vw]">
             {credibilityData.map((item, index) => (
               <div
                 key={index}
@@ -201,7 +200,7 @@ export default function CredibilityStripSection() {
         </div>
         <Button
           variant="secondary"
-          className="border-[#007DB0] text-[#007DB0] lg:hidden mt-10 w-full"
+          className="border-[#007DB0] text-[#007DB0] lg:hidden mt-10 max-md:w-full"
         >
           BOOK A DIAGNOSIS <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
         </Button>

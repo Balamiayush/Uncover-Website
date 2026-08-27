@@ -13,7 +13,7 @@ export default function AboutSection() {
             ABOUT
           </p>
           <TextReveal>
-            <h2 className="text-[32px] max-lg:mt-4 lg:text-[5vw] leading-[103%] lg:leading-[90%] tracking-[-1px] lg:tracking-[-0.208vw] text-black max-w-[356px] lg:max-w-[85.69vw]">
+            <h2 className="text-[32px] max-lg:mt-4 lg:text-[5vw] leading-[103%] lg:leading-[90%] tracking-[-1px] lg:tracking-[-0.208vw] text-black w-full md:max-w-[768px] max-w-[356px] lg:max-w-[85.69vw]">
               <span className="hidden lg:inline-block lg:w-[14.097vw] h-1" />
               Uncover is a performance marketing agency that diagnoses the
               variables behind stalled growth and aligns on what's off, and
@@ -29,7 +29,7 @@ export default function AboutSection() {
           </p>
           <Button
             variant="secondary"
-            className="border-[#007DB0] max-lg:w-full text-[#007DB0]"
+            className="border-[#007DB0] max-md:w-full text-[#007DB0]"
           >
             BOOK A DIAGNOSIS <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
           </Button>
