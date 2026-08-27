@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Matter from "matter-js";
 
 const PHRASES = [
@@ -23,25 +23,41 @@ const PHRASES = [
   "Retention is the real problem. Everyone keeps optimising acquisition.",
 ];
 
+const MOBILE_BREAKPOINT = 768;
+const DESKTOP_DRAG_BREAKPOINT = 1024;
+
 export default function MatterPhysicsCards() {
   const sceneRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const [activePhrases, setActivePhrases] = useState(PHRASES);
 
-  // Handle responsive slicing for mobile (e.g., width < 768px)
+  // Track only whether we're mobile (boolean), not the sliced array itself.
+  // React bails out on re-renders when the same boolean value is set again,
+  // so this no longer re-fires on every mobile "resize" (e.g. address bar
+  // show/hide while scrolling), which was resetting the physics engine.
+  const [isMobile, setIsMobile] = useState(false);
+  const lastWidthRef = useRef<number>(0);
+
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setActivePhrases(PHRASES.slice(0, 12));
-      } else {
-        setActivePhrases(PHRASES);
-      }
+    const checkMobile = () => {
+      const width = window.innerWidth;
+      // Ignore resize events that don't actually change width
+      // (mobile browsers fire resize on scroll for the address bar,
+      // which changes height, not width).
+      if (width === lastWidthRef.current) return;
+      lastWidthRef.current = width;
+
+      setIsMobile(width < MOBILE_BREAKPOINT);
     };
 
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
+  const activePhrases = useMemo(
+    () => (isMobile ? PHRASES.slice(0, 12) : PHRASES),
+    [isMobile],
+  );
 
   useEffect(() => {
     if (!sceneRef.current) return;
@@ -140,7 +156,7 @@ export default function MatterPhysicsCards() {
       });
 
       // 4. Mouse Drag Setup - Only for Desktop (1024px and wider)
-      if (window.innerWidth >= 1024) {
+      if (window.innerWidth >= DESKTOP_DRAG_BREAKPOINT) {
         const mouse = Matter.Mouse.create(container);
         const mouseConstraint = Matter.MouseConstraint.create(engine, {
           mouse: mouse,
@@ -202,7 +218,7 @@ export default function MatterPhysicsCards() {
   return (
     <section
       ref={sceneRef}
-      className="relative w-full h-[120vh] bg-[#1A1A1A] overflow-hidden"
+      className="relative w-full h-screen max-lg:h-[120vh] bg-[#1A1A1A] overflow-hidden"
     >
       {activePhrases.map((text, i) => {
         const isHighlight = text === "That's exactly what we diagnose.";

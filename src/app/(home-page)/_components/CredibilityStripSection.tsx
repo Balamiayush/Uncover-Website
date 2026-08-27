@@ -76,7 +76,7 @@ export default function CredibilityStripSection() {
           tl.to(
             [prevTitle, prevDesc],
             {
-              opacity: 0.3,
+              opacity: 0.1,
               duration: 0.5,
               ease: "power1.inOut",
             },
@@ -200,7 +200,7 @@ export default function CredibilityStripSection() {
                 ref={(el) => {
                   titlesRef.current[index] = el;
                 }}
-                className="opacity-30"
+                className="opacity-10"
               >
                 <p className="text-[20px] lg:text-[1.944vw] font-normal leading-[100%] text-black">
                   {item.title}
@@ -216,9 +216,9 @@ export default function CredibilityStripSection() {
                 ref={(el) => {
                   descriptionsRef.current[index] = el;
                 }}
-                className="opacity-30"
+                className="opacity-10"
               >
-                <p className="text-[14px] font-haas lg:text-[1.111vw] text-black/60 leading-[130%] lg:leading-[120%]">
+                <p className="text-[14px] font-haas lg:text-[1.111vw] text-black/80 leading-[130%] lg:leading-[120%]">
                   {item.description}
                 </p>
               </div>

@@ -24,7 +24,7 @@ export default function AboutSection() {
 
         <div className="w-full h-[1px] lg:h-[0.069vw] bg-[#E7E7F1] mt- lg:mt-[5vw] lg:block hidden" />
         <div className=" mt-10 flex lg:flex-row flex-col justify-between items-start gap-10 lg:gap-0 w-full lg:mt-[5vw]">
-          <p className="text-[14px] lg:block hidden lg:text-[1.11vw] max-w-[277px] text-[#000000B2] lg:max-w-[16.4583vw] leading-[120%] uppercase">
+          <p className="text-[14px] lg:block hidden lg:text-[1.11vw] max-w-[277px] text-[#000] lg:max-w-[16.4583vw] leading-[120%] uppercase">
             We ask the right questions on the first call.
           </p>
           <Button
