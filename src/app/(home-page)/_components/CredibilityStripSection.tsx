@@ -65,9 +65,36 @@ export default function CredibilityStripSection() {
 
         const prevTitle = titlesRef.current[index - 1];
         const prevDesc = descriptionsRef.current[index - 1];
+        const prevPath = paths[index - 1];
+
         const currentTitle = titlesRef.current[index];
         const currentDesc = descriptionsRef.current[index];
         const currentPath = paths[index];
+
+        // Fade out previous item
+        if (prevTitle && prevDesc) {
+          tl.to(
+            [prevTitle, prevDesc],
+            {
+              opacity: 0.3,
+              duration: 0.5,
+              ease: "power1.inOut",
+            },
+            `step-${index}`,
+          );
+        }
+
+        if (prevPath) {
+          tl.to(
+            prevPath,
+            {
+              opacity: 0.2,
+              duration: 0.5,
+              ease: "power1.inOut",
+            },
+            `step-${index}`,
+          );
+        }
 
         // Fade in current title (opacity 1) and description (opacity 1)
         if (currentTitle && currentDesc) {
@@ -78,7 +105,7 @@ export default function CredibilityStripSection() {
               duration: 0.5,
               ease: "power1.inOut",
             },
-            "<",
+            `step-${index}`,
           );
         }
 
@@ -91,7 +118,7 @@ export default function CredibilityStripSection() {
               duration: 0.5,
               ease: "power1.inOut",
             },
-            "<",
+            `step-${index}`,
           );
         }
       });
@@ -127,7 +154,7 @@ export default function CredibilityStripSection() {
         <div className="line w-full h-px bg-[#E7E7F1] mt-10 lg:mt-20"></div>
 
         <div className="flex justify-between mt-10 lg:mt-20">
-            <div>
+          <div>
             <svg
               id="svgLine"
               width="11"

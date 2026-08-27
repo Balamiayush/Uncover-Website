@@ -139,28 +139,30 @@ export default function MatterPhysicsCards() {
         Matter.World.add(world!, body);
       });
 
-      // 4. Mouse Drag Setup
-      const mouse = Matter.Mouse.create(container);
-      const mouseConstraint = Matter.MouseConstraint.create(engine, {
-        mouse: mouse,
-        constraint: {
-          stiffness: 0.2,
-          render: {
-            visible: false,
+      // 4. Mouse Drag Setup - Only for Desktop (1024px and wider)
+      if (window.innerWidth >= 1024) {
+        const mouse = Matter.Mouse.create(container);
+        const mouseConstraint = Matter.MouseConstraint.create(engine, {
+          mouse: mouse,
+          constraint: {
+            stiffness: 0.2,
+            render: {
+              visible: false,
+            },
           },
-        },
-      });
+        });
 
-      Matter.World.add(world, mouseConstraint);
+        Matter.World.add(world, mouseConstraint);
 
-      mouse.element.removeEventListener(
-        "mousewheel",
-        (mouse as any).mousewheel,
-      );
-      mouse.element.removeEventListener(
-        "DOMMouseScroll",
-        (mouse as any).mousewheel,
-      );
+        mouse.element.removeEventListener(
+          "mousewheel",
+          (mouse as any).mousewheel,
+        );
+        mouse.element.removeEventListener(
+          "DOMMouseScroll",
+          (mouse as any).mousewheel,
+        );
+      }
 
       // 5. Run Engine
       runner = Matter.Runner.create();
@@ -200,7 +202,7 @@ export default function MatterPhysicsCards() {
   return (
     <section
       ref={sceneRef}
-      className="relative w-full h-screen bg-[#1A1A1A] overflow-hidden"
+      className="relative w-full h-[120vh] bg-[#1A1A1A] overflow-hidden"
     >
       {activePhrases.map((text, i) => {
         const isHighlight = text === "That's exactly what we diagnose.";
@@ -210,7 +212,7 @@ export default function MatterPhysicsCards() {
             ref={(el) => {
               cardsRef.current[i] = el;
             }}
-            className={`absolute top-0 left-0 px-4 py-2.5 lg:px-[1.39vw] lg:py-[0.83vw] rounded-md text-[14px] lg:text-[1.11vw] lg:h-[5vw] items-center justify-center flex leading-[120%] tracking-tight select-none pointer-events-auto cursor-grab font-haas active:cursor-grabbing max-lg:w-[230px] ${
+            className={`absolute top-0 left-0 px-4 py-2.5 lg:px-[1.39vw] lg:py-[0.83vw] rounded-md text-[14px] lg:text-[1.11vw] lg:h-[5vw] items-center justify-center flex leading-[120%] tracking-tight select-none pointer-events-none lg:pointer-events-auto lg:cursor-grab font-haas lg:active:cursor-grabbing max-lg:w-[230px] ${
               isHighlight
                 ? "bg-[#FFD000] text-black lg:text-[20px] text-[16px] font-familjen!"
                 : "bg-white"
