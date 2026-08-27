@@ -129,7 +129,7 @@ export default function CredibilityStripSection() {
   return (
     <div
       ref={containerRef}
-      className="py-[64px] lg:min-h-screen overflow-x-hidden lg:py-[8.33vw] w-full bg-white text-black"
+      className="py-[64px]  lg:min-h-screen overflow-x-hidden lg:py-[8.33vw] w-full bg-white text-black"
     >
       <LayoutWrapper>
         {/* Header Block */}

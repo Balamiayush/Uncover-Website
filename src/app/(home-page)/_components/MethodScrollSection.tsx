@@ -153,7 +153,7 @@ export default function MethodScrollSection() {
               key={idx}
               className={`absolute z-10 flex items-start gap-4 ${step.positionClass}`}
             >
-              <span className="w-8 h-8 bg-white text-black text-sm font-bold flex items-center justify-center rounded-full border-5 border-[#3e3e3e] shrink-0">
+              <span className="w-8 h-8 bg-white text-black text-sm font-bold flex items-center justify-center rounded-full border-5 border-[#3e3e3e] shrink-0 font-haas!">
                 {step.num}
               </span>
               <div>
