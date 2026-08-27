@@ -56,13 +56,11 @@ export default function TextReveal({
             type: "lines",
             mask: "lines",
             linesClass: "split-line",
-           
           });
 
           const splitLines = split.lines as HTMLElement[];
 
           splitLines.forEach((line) => {
-            line.style.overflow = "visible";
             line.style.display = "block";
           });
 
@@ -78,6 +76,7 @@ export default function TextReveal({
           splitRefs.current.push(split);
           lines.current.push(...splitLines);
         });
+
         gsap.set(lines.current, { y: "100%" });
 
         const animationProps: gsap.TweenVars = {
@@ -86,9 +85,16 @@ export default function TextReveal({
           stagger: 0.1,
           ease: "expo.out",
           delay,
+          onComplete: () => {
+            // Unclip the outer GSAP mask wrapper so descenders don't get cut off
+            lines.current.forEach((line) => {
+              if (line.parentElement) {
+                line.parentElement.style.overflow = "visible";
+              }
+            });
+          },
         };
 
-        // Trigger animations
         if (animateOnScroll) {
           gsap.to(lines.current, {
             ...animationProps,

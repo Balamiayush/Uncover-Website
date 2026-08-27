@@ -16,18 +16,18 @@ export default function page() {
   return (
     <div className="w-full h-full relative ">
       <HeroSection />
-       <AboutSection />
+      <AboutSection />
       <ScatteredPhrasesSection />
-      <TheProblemSection/>
+      <TheProblemSection />
       <WhatWeDo />
-      <OurScopeofWork/>
-      <WeBuildUncoverSection/>
+      <OurScopeofWork />
+      <WeBuildUncoverSection />
       <CredibilityStripSection />
-      <CeoSection/>
-      <IndustriesWeWork /> 
+      <CeoSection />
+      <IndustriesWeWork />
       <MethodScrollSection />
-      <ContactUsSection/>
-      <FAQ/>
+      <ContactUsSection />
+      <FAQ />
     </div>
   );
 }

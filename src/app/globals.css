@@ -42,6 +42,7 @@ html.lenis body {
 }
 
 .split-line {
-  overflow: hidden;
+  /* vertical-align: top; */
   display: block;
+  
 }
