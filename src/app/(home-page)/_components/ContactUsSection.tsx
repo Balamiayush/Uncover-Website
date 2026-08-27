@@ -37,7 +37,7 @@ export default function ContactUsSection() {
                   type="text"
                   placeholder="Full name *"
                   required
-                  className="w-full font-haas h-[52px] lg:h-[3.89vw] px-4 lg:px-[1.11vw] lg:rounded-[0.28vw] border border-[#D0D5DD] text-[15px] lg:text-[1.11vw] text-black placeholder:text-[#8F959B] focus:outline-none focus:border-[#0088CC] transition-colors"
+                  className="w-full font-haas h-[52px] lg:h-[3.89vw] px-4 lg:px-[1.11vw] lg:rounded-[0.28vw] rounded-[4px] border border-[#D0D5DD] text-[15px] lg:text-[1.11vw] text-black placeholder:text-[#8F959B] focus:outline-none focus:border-[#0088CC] transition-colors"
                 />
                 <input
                   type="email"
