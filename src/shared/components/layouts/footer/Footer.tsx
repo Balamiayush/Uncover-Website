@@ -7,7 +7,6 @@ import TextSlide from "../../ui/TextHoverAnim/TextSlide";
 import FooterLogo from "../../icons/FooterLogo";
 import Image from "next/image";
 
-
 export interface FooterNavigation {
   socials: NavItem[];
   site: NavItem[];
@@ -21,13 +20,13 @@ export const FOOTER_NAVIGATION: FooterNavigation = {
 export default function Footer() {
   return (
     <div className="pt-16 pb-6 overflow-x-hidden  relative lg:pt-[4.44vw] lg:pb-[2.22vw] bg-black">
-    <Image
+      <Image
         fill
         className=" object-cover"
         src={"/images/hero-section-img/hero-section-bg.png"}
         alt=""
       />
-      <LayoutWrapper>
+      <LayoutWrapper className=" relative z-10">
         <div className="border border-white/20 grid grid-cols-1 md:grid-cols-3">
           <div className="flex flex-col gap-[60px] lg:gap-[3vw] max-lg:h-[276px] p-8 lg:p-[3.33vw] border-b md:border-b-0 md:border-r border-white/20">
             <p className="lg:text-[1.11vw] text-[14px] uppercase text-[#FFD900]">
@@ -94,7 +93,7 @@ export default function Footer() {
         </div>
         <div className=" flex justify-between  max-lg:gap-y-2 lg:mt-[3.33vw] mt-[32px]">
           <p className="text-[#FFFFFFB2] text-[12px] lg:block hidden lg:text-[0.97vw] uppercase leading-none ">
-            © 2026 Uncover{" "}. All rights reserved.
+            © 2026 Uncover . All rights reserved.
           </p>
           <p className="text-[#FFFFFFB2] lg:hidden block text-[12px] lg:text-[0.97vw] uppercase leading-none ">
             © 2026 Uncover

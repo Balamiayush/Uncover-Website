@@ -16,7 +16,7 @@ export default function page() {
   return (
     <div className="w-full h-full relative ">
       <HeroSection />
-      <AboutSection />
+      {/* <AboutSection />
       <ScatteredPhrasesSection />
       <TheProblemSection/>
       <WhatWeDo />
@@ -24,7 +24,7 @@ export default function page() {
       <WeBuildUncoverSection/>
       <CredibilityStripSection />
       <CeoSection/>
-      <IndustriesWeWork />
+      <IndustriesWeWork /> */}
       <MethodScrollSection />
       <ContactUsSection/>
       <FAQ/>

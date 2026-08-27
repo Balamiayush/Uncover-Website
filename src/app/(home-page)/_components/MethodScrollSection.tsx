@@ -17,25 +17,25 @@ const STEPS = [
     num: "1",
     title: "DIAGNOSE: FIND THE REAL CONSTRAINT.",
     desc: "We analyse your funnel, positioning, customer journey, economics, and data to identify what's actually holding back growth.",
-    positionClass: "lg:top-[10%] lg:right-[-31%] top-[6%]",
+    positionClass: "lg:top-[10%] lg:right-[-29%] top-[6%]",
   },
   {
     num: "2",
     title: "PRIORITISE: FOCUS ON WHAT MOVES THE NEEDLE.",
     desc: "Not every problem deserves immediate attention. We find the highest-impact opportunities and decide what to fix first.",
-    positionClass: "lg:top-[28%] lg:left-[3%] top-[23%] right-[2%]",
+    positionClass: "lg:top-[28%] lg:left-[1%] top-[23%] right-[-1%]",
   },
   {
     num: "3",
     title: "BUILD: TURN STRATEGY INTO ACTION.",
     desc: "We launch focused campaigns built around clear hypotheses, measurable outcomes, and informed decisions.",
-    positionClass: "lg:top-[49%] lg:right-[-62%] top-[40%]",
+    positionClass: "lg:top-[49%] lg:right-[-60%] top-[40%]",
   },
   {
     num: "4",
     title: "MEASURE: BUSINESS IMPACT OVER VANITY METRICS.",
     desc: "We connect marketing performance to outcomes that matter revenue, retention, profitability.",
-    positionClass: "lg:top-[66%] lg:left-[-1%] top-[62%] left-[40%]",
+    positionClass: "lg:top-[66%] lg:left-[-3%] top-[62%] left-[40%]",
   },
   {
     num: "5",
@@ -99,7 +99,7 @@ export default function MethodScrollSection() {
       src={'/images/hero-section-img/hero-section-bg.png'}
       />
       <LayoutWrapper>
-        {/* Header */}
+       
         <div className="relative z-10">
           <p className="text-[14px] lg:text-[0.972vw] text-[#FFD900] font-familjen uppercase">
             THE METHOD
@@ -151,7 +151,7 @@ export default function MethodScrollSection() {
               key={idx}
               className={`absolute z-10 flex items-start gap-4 ${step.positionClass}`}
             >
-              <span className="w-8 h-8 bg-white text-black text-sm font-bold flex items-center justify-center rounded-full border-[4px] border-[#FFFFFF33] shrink-0">
+              <span className="w-8 h-8 bg-white text-black text-sm font-bold flex items-center justify-center rounded-full border-5 border-[#3e3e3e] shrink-0 ">
                 {step.num}
               </span>
               <div>
@@ -210,9 +210,9 @@ export default function MethodScrollSection() {
               key={idx}
               className={`absolute flex items-center gap-[1.2vw] w-[26vw] ${step.positionClass}`}
             >
-              <span className="w-[1.9vw] h-[1.9vw] bg-white text-black text-[0.9vw] font-bold text-center flex items-center justify-center rounded-full border-[6px] border-[#FFFFFF33] shrink-0">
+              <div className="w-[3.125vw] h-[3.125vw] bg-white text-black text-[0.9vw]  text-center flex items-center justify-center rounded-full border-4 border-[#3e3e3e]  font-haas  shrink-0">
                 {step.num}
-              </span>
+              </div>
               <div>
                 <p className="text-[1.39vw] mb-[1.11vw] text-white uppercase text-nowrap">
                   {step.title}
