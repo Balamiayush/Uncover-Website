@@ -57,7 +57,7 @@ export default function ScrollVideoFrameComp() {
         scrollTrigger: {
           trigger: "body",
           start: "top top",
-          end: "+=380%",
+          end: "+=410%",
           scrub: 1,
         },
       });
