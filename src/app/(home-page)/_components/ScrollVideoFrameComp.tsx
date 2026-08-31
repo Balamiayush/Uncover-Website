@@ -91,7 +91,7 @@ export default function ScrollVideoFrameComp() {
 
   return (
     <div ref={containerRef} className="w-full h-full fixed z-1000 top-0 pointer-events-none">
-      <section className="canvas-section fixed  left-1/2 -translate-x-1/2 lg:top-[40%] md:top-[60%] max-lg:top-1/2 max-lg:-translate-y-1/2 w-full h-[40%] md:w-[40vw] md:h-[40vw] lg:h-[30vw] lg:w-[30vw]">
+      <section className="canvas-section fixed  left-1/2 -translate-x-1/2 lg:top-[32%] xl:top-[40%] md:top-[60%] max-lg:top-1/2 max-lg:-translate-y-1/2 w-full h-[40%] md:w-[40vw] md:h-[40vw] lg:h-[30vw] lg:w-[30vw]">
         <canvas ref={canvasRef} className="h-full w-full object-cover" />
       </section>
     </div>
