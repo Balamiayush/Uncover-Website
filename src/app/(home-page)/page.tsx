@@ -8,6 +8,7 @@ import IndustriesWeWork from "./_components/IndustriesWeWork";
 import MethodScrollSection from "./_components/MethodScrollSection";
 import OurScopeofWork from "./_components/OurScopeofWork";
 import ScatteredPhrasesSection from "./_components/ScatteredPhrasesSection";
+import ScrollVideoFrameComp from "./_components/ScrollVideoFrameComp";
 import TheProblemSection from "./_components/TheProblemSection";
 import WeBuildUncoverSection from "./_components/WeBuildUncoverSection";
 import WhatWeDo from "./_components/WhatWeDo";
@@ -15,7 +16,9 @@ import WhatWeDo from "./_components/WhatWeDo";
 export default function page() {
   return (
     <div className="w-full h-full relative ">
+      <ScrollVideoFrameComp/>
       <HeroSection />
+      
       <AboutSection />
       <ScatteredPhrasesSection />
       <TheProblemSection />
