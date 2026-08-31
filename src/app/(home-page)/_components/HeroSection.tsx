@@ -32,7 +32,7 @@ export default function HeroSection() {
           </div>
 
           <div className="flex justify-center max-lg:gap-[48px] flex-col items-center">
-            <div className="lg:w-[19.583vw] lg:h-[22.153vw] w-[190px] h-[207px] relative">
+            <div className="lg:w-[19.583vw] lg:h-[22.153vw] w-[190px] h-[207px] relative opacity-0">
               <Image
                 fill
                 alt=""
