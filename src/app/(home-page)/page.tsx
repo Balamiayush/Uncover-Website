@@ -21,7 +21,8 @@ export default function page() {
       
       <AboutSection />
       <ScatteredPhrasesSection />
-      <TheProblemSection />
+     <div className=" relative z-[1000]">
+       <TheProblemSection />
       <WhatWeDo />
       <OurScopeofWork />
       <WeBuildUncoverSection />
@@ -31,6 +32,7 @@ export default function page() {
       <MethodScrollSection />
       <ContactUsSection />
       <FAQ />
+     </div>
     </div>
   );
 }

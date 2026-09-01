@@ -22,7 +22,7 @@ export default function ContactUsSection() {
   const wordCount = message.trim() ? message.trim().split(/\s+/).length : 0;
 
   return (
-    <div className="lg:min-h-screen w-full py-[64px] lg:py-[8.33vw] flex flex-col items-center justify-center">
+    <div className="lg:min-h-screen bg-white w-full py-[64px] lg:py-[8.33vw] flex flex-col items-center justify-center">
       <LayoutWrapper className="w-full h-full flex flex-col items-center justify-center text-left">
         <div className="w-full lg:max-w-[63.33vw]">
           <p className="max-lg:hidden lg:text-[1.11vw] lg:max-w-[25.42vw] leading-[120%] lg:mb-[2.78vw] uppercase text-gray-800">

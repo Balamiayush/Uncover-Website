@@ -16,7 +16,7 @@ const MOBILE_INDUSTRIES = [
 
 export default function IndustriesWeWork() {
   return (
-    <div className="py-[64px] lg:py-[12.5vw]">
+    <div className="py-[64px] lg:py-[12.5vw] bg-white">
       <LayoutWrapper>
         <div className="flex flex-col items-center justify-center text-center">
           <p className="text-[14px] lg:text-[0.972vw] text-[#007DB0] font-familjen uppercase">

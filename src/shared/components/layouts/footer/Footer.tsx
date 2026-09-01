@@ -19,7 +19,7 @@ export const FOOTER_NAVIGATION: FooterNavigation = {
 
 export default function Footer() {
   return (
-    <div className="pt-16 pb-6 overflow-x-hidden  relative lg:pt-[4.44vw] lg:pb-[2.22vw] bg-black">
+    <div className="pt-16 pb-6 overflow-x-hidden  relative z-[999] lg:pt-[4.44vw] lg:pb-[2.22vw] bg-black">
       <Image
         fill
         className=" object-cover"

@@ -76,7 +76,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="lg:py-[8.33vw] w-full py-[64px]">
+    <div className="lg:py-[8.33vw] w-full py-[64px] bg-white">
       <LayoutWrapper className="flex flex-col lg:flex-row justify-between w-full gap-10 lg:gap-0">
         <div>
           <div className="">

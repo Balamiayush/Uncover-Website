@@ -10,7 +10,7 @@ export default function TheProblemSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div ref={sectionRef} className="relative w-full py-16 lg:py-[10.42vw]">
+    <div ref={sectionRef} className="relative w-full py-16 lg:py-[10.42vw] bg-white">
       <LayoutWrapper className="text-center">
         <p
           className="shrink-0 text-[14px] uppercase text-[#007DB0] lg:text-[0.972vw]"
