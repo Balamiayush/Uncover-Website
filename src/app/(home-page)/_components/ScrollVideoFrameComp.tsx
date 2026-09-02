@@ -8,7 +8,6 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollVideoFrameComp() {
-
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -58,8 +57,9 @@ export default function ScrollVideoFrameComp() {
         scrollTrigger: {
           trigger: "body",
           start: "top top",
-          end: "+=200%",
-          scrub: 1,
+          end: "+=300%",
+          // markers: true,
+          scrub: 2,
         },
       });
 
@@ -70,27 +70,25 @@ export default function ScrollVideoFrameComp() {
           frame: frameCount - 1,
           snap: "frame",
           ease: "none",
-          duration: 1,
+          duration: 3,
           onUpdate: render,
         },
-        0
+        0,
       );
 
       // Fade out canvas CSS opacity at the end of the scroll (e.g., final 20% of scroll)
-      tl.to(
-        containerRef.current,
-        {
-         
-         duration: 1,
-        },
-  
-      );
+      tl.to(containerRef.current, {
+        duration: 1,
+      });
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (
-    <div ref={containerRef} className="w-full h-full z-[99] fixed  top-0 pointer-events-none">
+    <div
+      ref={containerRef}
+      className="w-full h-full z-[99] fixed  top-0 pointer-events-none"
+    >
       <section className="canvas-section fixed  left-1/2 -translate-x-1/2 lg:top-[32%] xl:top-[40%] md:top-[60%] max-lg:top-1/2 max-lg:-translate-y-1/2 w-full h-[40%] md:w-[40vw] md:h-[40vw] lg:h-[26vw] lg:w-[26vw]">
         <canvas ref={canvasRef} className="h-full w-full object-cover" />
       </section>

@@ -1,20 +1,13 @@
 import ArrowIcon from "@/shared/components/icons/ArrowIcon";
 import LayoutWrapper from "@/shared/components/layouts/wrapper/LayoutWrapper";
-import Button from "@/shared/components/ui/button/Button";
+
 
 import TextSlide from "@/shared/components/ui/TextHoverAnim/TextSlide";
-import Image from "next/image";
+
 
 export default function HeroSection() {
   return (
-    <div className="h-screen  w-full relative  text-white pt-[130px] lg:pt-[9.028vw] pb-[52px] lg:pb-[2vw]  ">
-      <Image
-        fill
-        className=" object-cover"
-        src={"/images/hero-section-img/hero-section-bg.png"}
-        alt=""
-      />
-
+    <div className="h-screen  w-full relative  text-white pt-[130px] lg:pt-[9.028vw] pb-[52px] lg:pb-[2vw] bg-[url('/images/hero-section-img/hero-section-bg-v1.webp')]  bg-cover bg-center bg-no-repeat  ">
       <LayoutWrapper className=" w-full relative z-10 flex flex-col h-full justify-between">
         <div className="">
           <h1 className="text-[40px] lg:text-[5vw] xl:text-[5vw] leading-[100%] lg:leading-[80%] tracking-[-3px] lg:tracking-[-0.208vw] max-w-[358px] lg:max-w-[47.222vw]">
@@ -32,7 +25,6 @@ export default function HeroSection() {
           </div>
 
           <div className="flex justify-center max-lg:gap-[48px] flex-col items-center">
-            
             <p className="lg:max-w-[19.86vw] max-w-[286px] text-center lg:text-[1.25vw] text-[18px] text-white leading-[110%] font-normal">
               Most businesses find out the problem, after the budget is already
               gone.
