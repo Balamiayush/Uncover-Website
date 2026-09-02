@@ -1,9 +1,7 @@
 import ArrowIcon from "@/shared/components/icons/ArrowIcon";
 import LayoutWrapper from "@/shared/components/layouts/wrapper/LayoutWrapper";
 
-
 import TextSlide from "@/shared/components/ui/TextHoverAnim/TextSlide";
-
 
 export default function HeroSection() {
   return (

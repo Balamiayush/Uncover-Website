@@ -17,31 +17,36 @@ const STEPS = [
     num: "1",
     title: "DIAGNOSE: FIND THE REAL CONSTRAINT.",
     desc: "We analyse your funnel, positioning, customer journey, economics, and data to identify what's actually holding back growth.",
-    positionClass: "lg:top-[10%] lg:right-[-29%] md:top-[10%] md:right-[-16%] top-[6%]",
+    positionClass:
+      "lg:top-[10%] lg:right-[-29%] md:top-[10%] md:right-[-16%] top-[6%]",
   },
   {
     num: "2",
     title: "PRIORITISE: FOCUS ON WHAT MOVES THE NEEDLE.",
     desc: "Not every problem deserves immediate attention. We find the highest-impact opportunities and decide what to fix first.",
-    positionClass: "lg:top-[28%] lg:left-[1%] md:top-[28%] md:left-[2%] top-[23%] right-[-1%]",
+    positionClass:
+      "lg:top-[28%] lg:left-[1%] md:top-[28%] md:left-[2%] top-[23%] right-[-1%]",
   },
   {
     num: "3",
     title: "BUILD: TURN STRATEGY INTO ACTION.",
     desc: "We launch focused campaigns built around clear hypotheses, measurable outcomes, and informed decisions.",
-    positionClass: "lg:top-[49%] lg:right-[-60%] md:top-[42%] md:right-[-15%] top-[40%]",
+    positionClass:
+      "lg:top-[49%] lg:right-[-60%] md:top-[42%] md:right-[-15%] top-[40%]",
   },
   {
     num: "4",
     title: "MEASURE: BUSINESS IMPACT OVER VANITY METRICS.",
     desc: "We connect marketing performance to outcomes that matter revenue, retention, profitability.",
-    positionClass: "lg:top-[66%] lg:left-[-3%] md:top-[66%] md:left-[-1%] top-[62%] left-[40%]",
+    positionClass:
+      "lg:top-[66%] lg:left-[-3%] md:top-[66%] md:left-[-1%] top-[62%] left-[40%]",
   },
   {
     num: "5",
     title: "COMPOUND: BUILD WHAT KEEPS WORKING.",
     desc: "Successful campaigns become repeatable systems that keep improving over time.",
-    positionClass: "lg:top-[89%] lg:right-[-31%] md:top-[86%] md:right-[-12%] top-[80%]",
+    positionClass:
+      "lg:top-[89%] lg:right-[-31%] md:top-[86%] md:right-[-12%] top-[80%]",
   },
 ];
 
@@ -93,14 +98,9 @@ export default function MethodScrollSection() {
   return (
     <div
       ref={sectionRef}
-      className="relative w-full py-16 lg:py-[6.53vw] min-h-screen"
+      className="relative w-full py-16 lg:py-[6.53vw] min-h-screen  bg-[url('/images/hero-section-img/hero-section-bg-v1.webp')]  bg-cover bg-center bg-no-repeat"
     >
-      <Image
-        alt=""
-        fill
-        className="object-cover"
-        src={"/images/hero-section-img/hero-section-bg.png"}
-      />
+    
       <LayoutWrapper>
         <div className="relative z-10">
           <p className="text-[14px] lg:text-[0.972vw] md:text-[1.2vw] text-[#FFD900] font-familjen uppercase">
