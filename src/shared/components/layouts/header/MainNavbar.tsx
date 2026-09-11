@@ -77,8 +77,8 @@ export default function MainNavbar() {
     <header
       ref={headerRef}
       data-lenis-prevent
-      className={`navbarrr w-full fixed top-0 left-0 z-[99999] py-5 lg:py-[1.15vw] border-b border-white/52 transition-colors duration-300 ease-in-out mix-blend-difference ${
-        isOpen ? "bg-black" : ""
+      className={`navbarrr w-full fixed top-0 left-0 z-[99999] py-5 lg:py-[1.15vw] border-b border-white/52  ${
+        isOpen ? "bg-black mix-blend-normal" : "mix-blend-difference"
       }`}
     >
       <LayoutWrapper>
@@ -127,4 +127,4 @@ export default function MainNavbar() {
       <MobileNavbar isOpen={isOpen} onClose={closeMenu} />
     </header>
   );
-} 
+}
