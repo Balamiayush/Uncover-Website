@@ -3,43 +3,33 @@ import type { NavItem } from "../types";
 
 export const navLinks: NavItem[] = [
   {
-    id: "about",
-    label: "About",
-    href: ROUTES.ABOUT,
+    id: "problem",
+    label: "Problem",
+    href: "#problem",
   },
   {
-    id: "heritage",
-    label: "Heritage",
-    href: ROUTES.HERITAGE,
+    id: "scope",
+    label: "Scope",
+    href: "#scope",
   },
   {
-    id: "leadership",
-    label: "Leadership",
-    href: ROUTES.LEADERSHIP,
+    id: "industries",
+    label: "Industries",
+    href: "#industries",
   },
   {
-    id: "brands",
-    label: "Brands",
-    href: ROUTES.BRANDS,
-  },
-  {
-    id: "careers",
-    label: "Careers",
-    href: ROUTES.CAREERS,
-  },
-  {
-    id: "esg",
-    label: "ESG",
-    href: ROUTES.ESG,
-  },
-  {
-    id: "newsroom",
-    label: "Newsroom",
-    href: ROUTES.NEWSROOM,
+    id: "method",
+    label: "Method",
+    href: "#method",
   },
   {
     id: "contact",
-    label: "Contact",
-    href: ROUTES.CONTACT,
+    label: "Contact Us",
+    href: "#contact",
+  },
+  {
+    id: "faq",
+    label: "FAQs",
+    href: "#faq",
   },
 ];

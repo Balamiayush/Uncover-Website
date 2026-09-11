@@ -15,24 +15,24 @@ import WhatWeDo from "./_components/WhatWeDo";
 
 export default function page() {
   return (
-    <div className="w-full h-full relative ">
-      <ScrollVideoFrameComp/>
+    <div className="w-full h-full  ">
+      <ScrollVideoFrameComp />
       <HeroSection />
-      
+
       <AboutSection />
       <ScatteredPhrasesSection />
-     <div className=" relative z-[1000]">
-       <TheProblemSection />
-      <WhatWeDo />
-      <OurScopeofWork />
-      <WeBuildUncoverSection />
-      <CredibilityStripSection />
-      <CeoSection />
-      <IndustriesWeWork />
-      <MethodScrollSection />
-      <ContactUsSection />
-      <FAQ />
-     </div>
+      <div className=" relative z-[1000]">
+        <TheProblemSection />
+        <WhatWeDo />
+        <OurScopeofWork />
+        <WeBuildUncoverSection />
+        <CredibilityStripSection />
+        <CeoSection />
+        <IndustriesWeWork />
+        <MethodScrollSection />
+        <ContactUsSection />
+        <FAQ />
+      </div>
     </div>
   );
 }
