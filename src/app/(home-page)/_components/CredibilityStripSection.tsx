@@ -11,19 +11,19 @@ const credibilityData = [
     number: "1",
     title: "Senior Team",
     description:
-      "Not spending yet, and want the research done right the first time ready for an honest answer, even an uncomfortable one.",
+      "Already spending, and can't tell if it's working You've been burned by a report that looked impressive and meant nothing.",
   },
   {
     number: "1",
     title: "Diagnosis",
     description:
-      "A marketing agency diagnosing stalled growth, aligning on issues, and driving outcomes.",
+      "Not spending yet, and want the research done right the first time Ready for an honest answer, even an uncomfortable one",
   },
   {
     number: "10",
     title: "Industries",
     description:
-      "B2B, B2C, FMCG, E-commerce, SaaS, Educational Consultancy, Real Estate, Hospitality, Automotive.",
+      "Industries: B2B, B2C, FMCG, E-commerce, SaaS, Educational Consultancy, Real Estate, Hospitality, Automotive.",
   },
 ];
 
@@ -136,7 +136,7 @@ export default function CredibilityStripSection() {
         <div className="flex items-end justify-between w-full">
           <div>
             <p className="lg:text-[3.3333vw] text-[32px] leading-[80%] tracking-[-2px]">
-              Who is this for
+Who is this for
             </p>
             <p className="mt-[32px] max-w-[457px] lg:block hidden text-[18px] font-haas text-[#000000A3] leading-[120%]">
               A marketing agency diagnosing stalled growth, aligning on issues,

@@ -24,8 +24,7 @@ export default function HeroSection() {
 
           <div className="flex justify-center max-lg:gap-[48px] flex-col items-center">
             <p className="lg:max-w-[19.86vw] max-w-[286px] text-center lg:text-[1.25vw] text-[18px] text-white leading-[110%] font-normal">
-              Most businesses find out the problem, after the budget is already
-              gone.
+            Most businesses find out the problem, after the budget is already gone.
             </p>
           </div>
 

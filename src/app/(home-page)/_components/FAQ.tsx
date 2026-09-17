@@ -8,39 +8,39 @@ import React, { useState } from "react";
 const faqData = [
   {
     id: 1,
-    question: "Is uncover a marketing agency?",
+    question: "Is Uncover a Marketing agency?",
     answer:
-      "Yes. We help businesses diagnose, execute and optimize performance marketing. The difference is that we start by understanding what is actually limiting growth before putting more money behind campaigns.",
+      "Yes. We help businesses diagnose, execute and optimise performance marketing. The difference is that we start by understanding what is actually limiting growth before putting more money behind campaigns.",
   },
   {
     id: 2,
-    question: "What makes uncover different from a marketing agency?",
+    question: "What makes Uncover different from a marketing agency?",
     answer:
-      "We focus on end-to-end business growth engines rather than vanity metrics or isolated ad campaigns.",
+      "Most start with the campaign. We start with the problem. The diagnosis identifies the variables limiting performance, so strategy, execution and optimisation are built around what actually needs to change.",
   },
   {
     id: 3,
     question: "Do you handle execution as well?",
     answer:
-      "Yes, we take full ownership of technical execution, creative strategy, and campaign management.",
+      "Yes. We work alongside your team to turn the diagnosis into action — from performance marketing and creative to funnel optimisation, tracking and measurement.",
   },
   {
     id: 4,
     question: "Who do you work with?",
     answer:
-      "We work with ambitious founders and scaling companies looking for sustainable revenue growth.",
+      "We work with growth-stage and established businesses that already have marketing activity or spend in place and want to improve its efficiency and impact.",
   },
   {
     id: 5,
     question: "What channels do you work with?",
     answer:
-      "We work across paid social, search, programmatic, lifecycle email, and conversion rate optimization.",
+      "We work across Meta, Google, YouTube and other relevant acquisition channels based on where your customers are and what the diagnosis identifies.",
   },
   {
     id: 6,
     question: "What do I get from the diagnosis?",
     answer:
-      "You receive a comprehensive audit highlighting bottlenecks, actionable growth levers, and a clear execution roadmap.",
+      "A clear view of what is limiting performance, why it is happening, what should be prioritised, and what needs to change to improve your desired business outcome.",
   },
 ];
 

@@ -25,13 +25,13 @@ export default function page() {
         <TheProblemSection />
         <WhatWeDo />
         <OurScopeofWork />
-        <WeBuildUncoverSection />
         <CredibilityStripSection />
         <CeoSection />
         <IndustriesWeWork />
         <MethodScrollSection />
-        <ContactUsSection />
         <FAQ />
+        <WeBuildUncoverSection />
+        <ContactUsSection />
       </div>
     </div>
   );

@@ -26,8 +26,8 @@ export default function ContactUsSection() {
       <LayoutWrapper className="w-full h-full flex flex-col items-center justify-center text-left">
         <div className="w-full lg:max-w-[63.33vw]">
           <p className="max-lg:hidden lg:text-[1.11vw] lg:max-w-[25.42vw] leading-[120%] lg:mb-[2.78vw] uppercase text-gray-800">
-            One diagnosed variable, one honest conversation, one earned outcome
-            at a time.
+           One diagnosed variable, one honest conversation, one earned outcome at a time.
+
           </p>
 
           <p className="text-[32px] lg:text-[3.06vw] leading-[80%] tracking-[-2px] font-medium text-black">
@@ -35,7 +35,7 @@ export default function ContactUsSection() {
           </p>
 
           <p className="max-lg:hidden lg:mt-[1.67vw] font-haas lg:text-[1.25vw] text-[#000000A3]">
-            Fill in the details below to start the conversation
+          Fill in the details below to start the conversation
           </p>
 
           <div className="mt-8 lg:mt-[2.78vw] w-full">

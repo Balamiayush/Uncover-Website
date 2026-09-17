@@ -30,11 +30,11 @@ export default function TheProblemSection() {
           initialOpacity={0.15}
           className="mx-auto mt-[24px] mb-10  text-[32px] leading-[120%] tracking-[-0.04em] lg:mt-[3.333vw] lg:mb-[2.778vw] lg:max-w-[91.111vw] lg:text-[3.333vw] lg:tracking-[-0.139vw]"
         >
-          Audits show what happened, diagnosis shows why and what to do next.
-          Most marketing reports track activity, and most budgets follow last
-          quarter's habits rather than this quarter's actual growth constraints.
-          Whether you're fixing a leak or starting fresh, the rule is the same,
-          know before you spend.
+          An audit tells you what happened. A diagnosis tells you why, and what to do next.
+Most marketing reporting measures activity. Most marketing budgets get built on last quarter's habit, not on what's actually limiting growth this quarter.
+It doesn't matter which side of the problem you're on, troubleshooting a leak or building from a blank page. The fix is the same: know before you spend, not after.
+Global ad spend lost to inefficiency: $26.8B a year, up 34% in two years.
+
         </TextRevealOpacity>
 
         <Button

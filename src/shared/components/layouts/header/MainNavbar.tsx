@@ -28,7 +28,6 @@ export default function MainNavbar() {
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
 
-  // Show on scroll up, hide on scroll down
   useGSAP(() => {
     const showAnim = gsap.from(headerRef.current, { 
       yPercent: -100,
@@ -36,6 +35,17 @@ export default function MainNavbar() {
       duration: 0.3,
       ease: "power2.out"
     }).progress(1);
+
+    const bgAnim = gsap.fromTo(
+      headerRef.current,
+      { backgroundColor: "transparent" },
+      { 
+        backgroundColor: "#1a1a1a",
+        paused: true,
+        duration: 0.3,
+        ease: "power2.out"
+      }
+    ).progress(0);
 
     ScrollTrigger.create({
       start: "top top",
@@ -47,11 +57,20 @@ export default function MainNavbar() {
           return;
         }
 
-        // Scrolling down -> hide (-100%), Scrolling up -> show (0%)
+        // At the very top, ensure transparent background
+        if (self.scroll() <= 10) {
+          showAnim.play();
+          bgAnim.reverse();
+          return;
+        }
+
+        // Scrolling down -> hide (-100%), add background when visible
         if (self.direction === 1 && self.scroll() > 50) {
           showAnim.reverse();
+          bgAnim.play();
         } else {
           showAnim.play();
+          bgAnim.play();
         }
       }
     });
@@ -77,8 +96,8 @@ export default function MainNavbar() {
     <header
       ref={headerRef}
       data-lenis-prevent
-      className={`navbarrr w-full fixed top-0 left-0 z-[99999] py-5 lg:py-[1.15vw] border-b border-white/52  ${
-        isOpen ? "bg-black mix-blend-normal" : "mix-blend-difference"
+      className={`navbarrr w-full fixed top-0 left-0 z-[99999] py-5 lg:py-[1.15vw] border-b border-white/52 ${
+        isOpen ? "bg-black mix-blend-normal " : " "
       }`}
     >
       <LayoutWrapper>

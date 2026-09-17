@@ -107,10 +107,12 @@ export default function MethodScrollSection() {
             THE METHOD
           </p>
           <h2 className="text-[32px] mt-4 lg:mt-[1.6667vw] md:text-[42px] leading-[100%] lg:leading-[80%] tracking-[-2px] lg:text-[3.33vw] text-white">
-            80% Diagnosis. 20% Execution
+           80% Diagnosis. 20% Execution
+
           </h2>
           <p className="text-[14px] lg:text-[1.25vw] md:text-[16px] text-[#FFFFFFB8] mt-4 lg:mt-8">
-            Most of the work happens before a campaign ever goes live.
+           Most of the work happens before a campaign ever goes live.
+
           </p>
         </div>
 

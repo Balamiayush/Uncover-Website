@@ -13,8 +13,7 @@ export default function WhatWeDo() {
               The Growth Diagnosis
             </h3>
             <p className="text-[14px] my-[2.2222vw] lg:text-[1.111vw] max-w-[380px] lg:max-w-[25vw] font-haas text-[#000000B2] leading-[130%] lg:leading-[120%] lg:block hidden">
-              Before we spend a dollar of your budget, we spend our time finding
-              out where it should go. Everything else comes after.
+          Before we spend a dollar of your budget, we spend two weeks finding out where it should go. Everything else, the campaigns, the channels, the creative-  comes after.
             </p>
             <Button
               variant="secondary"
@@ -30,15 +29,15 @@ export default function WhatWeDo() {
                 Discovery Call
               </p>
               <p className="font-haas text-[14px] max-lg:max-w-[326px] lg:text-[1.1111vw] text-[#000000B2]">
-                We understand the business and the desired outcome.
+               We understand the business and the desired outcome.
               </p>
             </div>
             <div className="p-5 w-full gap-[48px] lg:p-[1.9444vw] lg:gap-[2.2222vw] rounded-t-[0.2778vw] w-full flex flex-col bg-[#F6FAFC]">
               <p className="lg:text-[1.9444vw] text-[24px] leading-[100%] tracking-[-0.0694vw]  text-black">
-                Discovery Call
+                Full Diagnosis
               </p>
               <p className="font-haas text-[14px] max-lg:max-w-[326px] lg:text-[1.1111vw] text-[#000000B2]">
-                We understand the business and the desired outcome.
+              A complete audit of every variable that touches growth -your funnel, market, and the metric your business is actually trying to move.
               </p>
             </div>
 
@@ -49,9 +48,11 @@ export default function WhatWeDo() {
               <div className="font-haas text-[14px] max-lg:max-w-[326px] lg:text-[1.1111vw] text-[#000000B2] flex flex-col gap-[0.56vw]">
                 <p>That includes :</p>
                 <ul className="list-disc list-inside space-y-[0.2778vw] pl-[0.2778vw]">
-                  <li>Executive Summary</li>
+                  <li>Executive Summary 
+</li>
                   <li>Growth Diagnosis</li>
-                  <li>Competitive Snapshot 90-Day Roadmap</li>
+                  <li>Competitive Snapshot 
+90-Day Roadmap</li>
                 </ul>
               </div>
             </div>
@@ -60,7 +61,7 @@ export default function WhatWeDo() {
             variant="secondary"
             className="border-[#007DB0] text-[#007DB0] lg:hidden "
           >
-            Visit the link here <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
+            BOOK A DIAGNOSIS <ArrowIcon className="ml-2 lg:ml-[0.56vw]" />
           </Button>
         </div>
       </LayoutWrapper>
