@@ -30,19 +30,12 @@ export default function MatterPhysicsCards() {
   const sceneRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Track only whether we're mobile (boolean), not the sliced array itself.
-  // React bails out on re-renders when the same boolean value is set again,
-  // so this no longer re-fires on every mobile "resize" (e.g. address bar
-  // show/hide while scrolling), which was resetting the physics engine.
   const [isMobile, setIsMobile] = useState(false);
   const lastWidthRef = useRef<number>(0);
 
   useEffect(() => {
     const checkMobile = () => {
       const width = window.innerWidth;
-      // Ignore resize events that don't actually change width
-      // (mobile browsers fire resize on scroll for the address bar,
-      // which changes height, not width).
       if (width === lastWidthRef.current) return;
       lastWidthRef.current = width;
 
@@ -130,10 +123,16 @@ export default function MatterPhysicsCards() {
         if (!el) return;
 
         const rect = el.getBoundingClientRect();
-        const startX = Math.random() * (width - rect.width) + rect.width / 2;
-        const startY = -120 - index * 100;
+        const text = activePhrases[index];
+        const isHighlight = text === "That's exactly what we diagnose.";
 
-        const initialAngle = (Math.random() - 0.5) * 0.45;
+        // Position the highlight box directly in the horizontal center
+        const startX = isHighlight
+          ? width / 2
+          : Math.random() * (width - rect.width) + rect.width / 2;
+
+        const startY = -120 - index * 100;
+        const initialAngle = isHighlight ? 0 : (Math.random() - 0.5) * 0.45;
 
         const body = Matter.Bodies.rectangle(
           startX,
@@ -155,7 +154,7 @@ export default function MatterPhysicsCards() {
         Matter.World.add(world!, body);
       });
 
-      // 4. Mouse Drag Setup - Only for Desktop (1024px and wider)
+      // 4. Mouse Drag Setup - Desktop only
       if (window.innerWidth >= DESKTOP_DRAG_BREAKPOINT) {
         const mouse = Matter.Mouse.create(container);
         const mouseConstraint = Matter.MouseConstraint.create(engine, {
